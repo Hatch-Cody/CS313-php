@@ -170,7 +170,7 @@ body {
 	color: 			#d1d1d1;
 }
 
-.overlayContent button {
+.overlayContent a {
 	position: 	relative;
 	width: 		20%;
 	margin: 	30px;
@@ -184,7 +184,7 @@ body {
 	border: none;
 }
 
-.overlayContent button:hover {
+.overlayContent a:hover {
 	background-color: #09366d;
 	color: white;
 }

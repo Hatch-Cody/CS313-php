@@ -28,8 +28,8 @@
 					</div>
 
 					<div class="overlayContent">
-						<button>Assignments</button>
-						<button>About Me</button>
+						<a href="assignments.php">Assignments</a>
+						<a href="intro.html">About Me</a>
 
 					</div>
 

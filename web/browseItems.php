@@ -31,40 +31,40 @@ then keep the user on the browse page.
 			xmlhttp.open("GET", "json_demo_db.php?x=" + dbParam, true);
 			xmlhttp.send();
 
-			var myList = [
-				{
-					"product": [
-						{
-							"name": "iPhone 11",
-							"brand": "Apple",
-							"price": "999.00",
-							"description": "6.1-Inch Liquid Retina HD LCD display Water and dust resistant Dual-camera system with 12MP Ultra wide and wide cameras;",
-							"image": "http://www.demo.com"
-						},
-						{
-							"name": "Versa",
-							"brand": "Fitbit",
-							"price": "165.00",
-							"description": "Track your all-day activity, 24/7 heart rate, & sleep stages, all with a 4 plus day battery life",
-							"image": ""
-						},
-						{
-							"name": "Galaxy",
-							"brand": "Samsung",
-							"price": "954.00",
-							"description": "An immersive Cinematic Infinity Display, Pro grade Camera and Wireless PowerShare",
-							"image": ""
-						},
-						{
-							"name": "XPS_15_9570",
-							"brand": "dell",
-							"price": "2999.00",
-							"description": "8th Generation Intel Core i9-8950HK Processor (12M Cache, up to 4.8 GHz, 6 cores)",
-							"image": ""
-						}
-					]
-				}
-			];
+			var myList = [{"product": 
+						   [ 
+							   { 
+								   "name": "iPhone 11",
+								   "brand":"Apple",
+								   "price": "999.00",
+								   "description": "6.1-Inch Liquid Retina HD LCD display Water and dust resistant Dual-camera system with 12MP Ultra wide and wide cameras;",
+								   "image":  "http://www.demo.com"		
+							   },		
+							   {
+								   "name": "Versa",
+								   "brand": "Fitbit",
+								   "price": "165.00",
+								   "description": "Track your all-day activity, 24/7 heart rate, & sleep stages, all with a 4 plus day battery life",
+								   "image": ""
+
+							   },
+							   {
+								   "name": "Galaxy",
+								   "brand": "Samsung",
+								   "price": "954.00",
+								   "description": "An immersive Cinematic Infinity Display, Pro grade Camera and Wireless PowerShare",
+								   "image": ""		
+							   },		
+							   {
+								   "name": "XPS_15_9570",
+								   "brand": "dell",
+								   "price": "2999.00",
+								   "description": "8th Generation Intel Core i9-8950HK Processor (12M Cache, up to 4.8 GHz, 6 cores)",
+								   "image": ""
+							   }
+						   ]
+						  }
+						 ];
 
 			// Builds the HTML Table out of myList.
 			function buildHtmlTable(selector) {
@@ -119,9 +119,9 @@ then keep the user on the browse page.
 		<div class="page">
 
 			<div class="infoBox" onload="onLoad=buildHtmlTable('#excelDataTable')">
-				
+
 				<table id="excelDataTable" border="1">	
-					
+
 				</table>
 
 			</div>

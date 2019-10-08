@@ -118,7 +118,7 @@ then keep the user on the browse page.
 
 		<div class="page">
 
-			<div class="titleBackground" onload="onLoad=buildHtmlTable('#excelDataTable')">
+			<div class="infoBox" onload="onLoad=buildHtmlTable('#excelDataTable')">
 
 				
 

@@ -31,6 +31,8 @@
         }
 
         function generateCode() {
+            var len = 7;
+            var arr = "123456789abcdefghijklmnopqrstuvwxyz";
             var ans = '';
             for (var i = len; i > 0; i--) {
                 ans +=
@@ -53,7 +55,7 @@
         <div class="main">
             <h1 style="text-align: center;">Night Saver</h1>
             <div class="flexContainer">
-                <div class="infoBox" id="infoBox" onload="">
+                <div class="infoBox" id="infoBox" onload="generateCode()">
                     <p>Here is your invite code:</p>
                     <input type="text" id="inviteCode" value="J7MX9T" disabled>
                     <br>

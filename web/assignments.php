@@ -27,11 +27,25 @@
 
 				<a href="intro.html" class="wideButton">Assignment # 1</a> 
 
-				<a href="#assignment2" class="wideButton">Assignment # 2</a><br>
+				<a href="#assignment2" class="wideButton">Assignment # 2</a>
 
 				<a href="browseItems.php" class="wideButton">Assignment # 3</a>
 
-				<a href="projectHome.html" class="wideButton">Personal Project</a><br>
+				<a href="" class="wideButton">Assignment # 4</a> 
+
+				<a href="" class="wideButton">Assignment # 5</a>
+
+				<a href="" class="wideButton">Assignment # 6</a>
+
+				<a href="" class="wideButton">Assignment # 7</a> 
+
+				<a href="" class="wideButton">Assignment # 8</a>
+
+				<a href="" class="wideButton">Assignment # 9</a>
+
+				<a href="" class="wideButton">Assignment # 10</a>
+
+				<a href="projectHome.html" class="wideButton">Personal Project</a>
 
 			</div>
 

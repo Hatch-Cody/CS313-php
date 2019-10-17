@@ -1,52 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Personal Homepage</title> 
 
-		<meta charset = "utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>Personal Homepage</title>
 
-		<link rel="stylesheet" href="aboutMe.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	</head>
+	<link rel="stylesheet" href="aboutMe.css">
 
-	<body>
+</head>
 
-		<!-- Nav Bar -->
-		<div class="topnav">
-			<a class="active" href="#home">Home</a>
-			<a href="assignments.php">Assignments</a>
-			<a href="intro.html">About Me</a>
-		</div>
+<body>
 
-		<div class="page">
+	<!-- Nav Bar -->
+	<div class="topnav">
+		<a class="active" href="#home">Home</a>
+		<a href="assignments.php">Assignments</a>
+		<a href="intro.html">About Me</a>
+	</div>
 
-			<div class="titleBackground">
-				<div class="overlay">
-					<div class="overlayBanner">
-						Cody Hatch
-					</div>
+	<div class="page">
 
-					<div class="overlayContent">
-						<a href="assignments.php">Assignments</a>
-						<a href="intro.html">About Me</a>
+		<div class="titleBackground">
+			<div class="overlay">
+				<div class="overlayBanner">
+					Cody Hatch
+				</div>
 
-					</div>
-
-					<?php  
-					$date = date('Y-m-d H:i:s');
-					echo "<p>The current server time is: " . $date . "</p>";
-					echo "<div class='flexContainer'>";
-
-					echo "</div>"
-					?>  
+				<div class="overlayContent">
+					<a href="assignments.php">Assignments</a>
+					<a href="intro.html">About Me</a>
 
 				</div>
 			</div>
-
-			<footer class="footer">
-				Page Designed By: Cody Hatch
-			</footer>
 		</div>
-	</body>
+
+		<footer class="footer">
+			Page Designed By: Cody Hatch
+		</footer>
+	</div>
+</body>
+
 </html>

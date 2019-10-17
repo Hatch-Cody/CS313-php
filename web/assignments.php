@@ -21,28 +21,58 @@
 
 		<div class="page">
 				
-			<h1 style="text-align: center">Coming Soon</h1>
-			
-		<?php  
-          echo "<div class='flexContainer'>";
-           
-          	for ($x = 1; $x <= 10; $x++) {
-            	echo "
-					<div>
-						Assignment # $x
-					</div>
-				";
-              
-              if ($x % 2 == 0) {
-              		echo "
-              		</div>
-              		<div class='flexContainer'>";
-            	}
-          };
-          echo "</div>"
-          ?>  
-			
-			
+			<h1 style="text-align: center">CS313 Assignments</h1>
+
+			<div class="flexContainer">
+				<button class="wideButton" onclick="intro.html" value="Assignment # 1">
+
+				<button class="wideButton" onclick="" value="Assignment # 2"><br>
+
+				<button class="wideButton" onclick="browseItems.php" value="Assignment # 3">
+
+				<button class="wideButton" onclick="projectHome.html" value="Personal Project"><br>
+				
+
+				<div>
+					Assignment # 1
+				</div>
+				<div>
+					Assignment # 2
+				</div>
+				<br>
+
+				<div>
+					Assignment # 3
+				</div>
+				<div>
+					Assignment # 4
+				</div>
+				<br>
+				
+				<div>
+					Assignment # 5
+				</div>
+				<div>
+					Assignment # 6
+				</div>
+				<br>
+
+				<div>
+					Assignment # 7
+				</div>
+				<div>
+					Assignment # 8
+				</div>
+				<br>
+
+				<div>
+					Assignment # 9
+				</div>
+				<div>
+					Assignment # 10
+				</div>
+				<br>
+			</div>
 
 			<footer class="footer">
 				Page Designed By: Cody Hatch

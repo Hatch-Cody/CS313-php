@@ -20,14 +20,23 @@
 
             /* Copy the text inside the text field */
             document.execCommand("copy");
-            
+
             // show snackbar alert that the code was copied
             var x = document.getElementById("snackbar");
             x.className = "show";
             setTimeout(function () { x.className = x.className.replace("show", ""); }, 2000);
 
             // wait two seconde then navigate to new page
-            setTimeout(function(){ window.location.assign("choicesForm.html"); }, 2000);
+            setTimeout(function () { window.location.assign("choicesForm.html"); }, 2000);
+        }
+
+        function generateCode() {
+            var ans = '';
+            for (var i = len; i > 0; i--) {
+                ans +=
+                    arr[Math.floor(Math.random() * arr.length)];
+            }
+            document.getElementById("inviteCode") = ans;
         }
 
     </script>

@@ -55,12 +55,13 @@
         <div class="main">
             <h1 style="text-align: center;">Night Saver</h1>
             <div class="flexContainer">
-                <div class="infoBox" id="infoBox" onload="generateCode()">
+                <div class="infoBox" id="infoBox">
                     <p>Here is your invite code:</p>
                     <input type="text" id="inviteCode" value="J7MX9T" disabled>
                     <br>
                     <p>Send this code to your group</p>
 
+                    <button onclick="generateCode()">Get Invite Code</button><br>
                     <button onclick="copyText()">Copy Code</button>
                     <div class="snackbar" id="snackbar">Copied invite code to clipboard</div>
 

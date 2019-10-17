@@ -242,7 +242,7 @@ body {
 	text-align: center;
 }
 
-a:link {
+.wideButton {
 	background-color: #516d7d;
 	padding: 		15px;
 	border-radius: 	5px;

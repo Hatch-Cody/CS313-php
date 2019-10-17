@@ -25,13 +25,13 @@
 
 			<div class="flexContainer">
 
-				<a href="intro.html">Assignment # 1</a> 
+				<a href="intro.html" class="wideButton">Assignment # 1</a> 
 
-				<a href="#assignment2">Assignment # 2</a><br>
+				<a href="#assignment2" class="wideButton">Assignment # 2</a><br>
 
-				<a href="browseItems.php">Assignment # 3</a>
+				<a href="browseItems.php" class="wideButton">Assignment # 3</a>
 
-				<a href="projectHome.html">Personal Project</a><br>
+				<a href="projectHome.html" class="wideButton">Personal Project</a><br>
 
 			<footer class="footer">
 				Page Designed By: Cody Hatch

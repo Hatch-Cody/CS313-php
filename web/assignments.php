@@ -24,55 +24,13 @@
 			<h1 style="text-align: center">CS313 Assignments</h1>
 
 			<div class="flexContainer">
-				<button class="wideButton" onclick="intro.html" value="Assignment # 1">
+				<button class="wideButton" onclick="intro.html">Assignment # 1</button> 
 
-				<button class="wideButton" onclick="" value="Assignment # 2"><br>
+				<button class="wideButton" onclick="#assignment2">Assignment # 2</button><br>
 
-				<button class="wideButton" onclick="browseItems.php" value="Assignment # 3">
+				<button class="wideButton" onclick="browseItems.php">Assignment # 3</button>
 
-				<button class="wideButton" onclick="projectHome.html" value="Personal Project"><br>
-				
-
-				<div>
-					Assignment # 1
-				</div>
-				<div>
-					Assignment # 2
-				</div>
-				<br>
-
-				<div>
-					Assignment # 3
-				</div>
-				<div>
-					Assignment # 4
-				</div>
-				<br>
-				
-				<div>
-					Assignment # 5
-				</div>
-				<div>
-					Assignment # 6
-				</div>
-				<br>
-
-				<div>
-					Assignment # 7
-				</div>
-				<div>
-					Assignment # 8
-				</div>
-				<br>
-
-				<div>
-					Assignment # 9
-				</div>
-				<div>
-					Assignment # 10
-				</div>
-				<br>
-			</div>
+				<button class="wideButton" onclick="projectHome.html">Personal Project</button><br>
 
 			<footer class="footer">
 				Page Designed By: Cody Hatch

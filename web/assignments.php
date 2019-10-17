@@ -33,6 +33,8 @@
 
 				<a href="projectHome.html" class="wideButton">Personal Project</a><br>
 
+			</div>
+
 			<footer class="footer">
 				Page Designed By: Cody Hatch
 			</footer>

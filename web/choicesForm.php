@@ -25,14 +25,14 @@
 			// show snackbar alert that the choices have been sent
 			var x = document.getElementById("snackbar");
 			x.className = "show";
-			setTimeout(function () { x.className = x.className.replace("show", ""); }, 2000);
+			setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 
 			nav();
 		}
 
 		function nav() {
             // wait two seconde then navigate to new page
-            setTimeout(function () { window.location.assign("choiceResult.php"); }, 1000);
+            window.location.assign("choiceResult.php");
         }
 
 	</script>
@@ -50,6 +50,7 @@
 			<h1 style="text-align: center;">Night Saver</h1>
 			<div class="flexContainer">
 				<form class="infoBox">
+
 					<input type="text" id="name" placeholder="Name"><br>
 					<input type="text" id="one" placeholder="First Choice"><br>
 					<input type="text" id="two" placeholder="Second Choice"><br>
@@ -58,7 +59,8 @@
 					<br>
 					<input type="submit" onclick="submitChoices()">
 					
-                    <div class="snackbar" id="snackbar">Choices have been submitted</div>
+					<div class="snackbar" id="snackbar">Choices have been submitted</div>
+					
 				</form>
 			</div>
 		</div>

@@ -25,7 +25,7 @@
 			// show snackbar alert that the choices have been sent
 			var x = document.getElementById("snackbar");
 			x.className = "show";
-			setTimeout(function () { x.className = x.className.replace("show", ""); }, 2000);
+			function () { x.className = x.className.replace("show", ""); };
 
 			// wait two seconde then navigate to new page
 			setTimeout(function () { window.location.assign("choiceResult.php"); }, 2000);

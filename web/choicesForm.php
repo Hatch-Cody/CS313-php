@@ -35,7 +35,7 @@ include_once 'includes/dbh.php';
 			// wait two seconde then navigate to new page
 			setTimeout(function () { window.location.assign("choiceResult.php"); }, 3000);
 		}
-		
+
 	</script>
 
 	<style>
@@ -102,7 +102,7 @@ include_once 'includes/dbh.php';
 					<input type="text" id="three" placeholder="Third Choice"><br>
 					<input type="text" id="least" placeholder="Least Favorite">
 					<br>
-					<input type="button" onclick="submitChoices()">
+					<input type="button" onclick="submitChoices()" value="Submit">
 
 
 				</form>

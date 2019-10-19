@@ -15,6 +15,10 @@ include_once 'includes/dbh.php';
 </head>
 
 <body>
+    <!-- Nav Bar -->
+	<div class="topnav">
+		<a class="active" href="#home">Home</a>
+	</div>
 
     <div class="page">
         <div class="main">

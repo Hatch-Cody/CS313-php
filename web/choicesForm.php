@@ -33,8 +33,9 @@ include_once 'includes/dbh.php';
 
 		function nav() {
 			// wait two seconde then navigate to new page
-			window.location.assign("choiceResult.php");
+			setTimeout(function () { window.location.assign("choiceResult.php"); }, 3000);
 		}
+		
 	</script>
 
 	<style>

@@ -25,9 +25,11 @@
             var x = document.getElementById("snackbar");
             x.className = "show";
             setTimeout(function () { x.className = x.className.replace("show", ""); }, 2000);
+        }
 
+        function nav() {
             // wait two seconde then navigate to new page
-            setTimeout(function () { window.location.assign("choicesForm.html"); }, 2000);
+            setTimeout(function () { window.location.assign("choicesForm.php"); }, 1000);
         }
 
         function generateCode() {
@@ -39,13 +41,15 @@
                     arr[Math.floor(Math.random() * arr.length)];
             }
             document.getElementById("inviteCode").value = ans;
+
+            return ans;
         }
 
     </script>
 
 </head>
 
-<body>
+<body onload="generateCode()">
     <!-- Nav Bar -->
     <div class="topnav">
         <a href="projectHome.html">Home</a>
@@ -57,12 +61,12 @@
             <div class="flexContainer">
                 <div class="infoBox" id="infoBox">
                     <p>Here is your invite code:</p>
-                    <input type="text" id="inviteCode" value="" disabled>
+                    <input type="text" id="inviteCode" name="inviteCode" disabled>
                     <br>
                     <p>Send this code to your group</p>
 
-                    <button onclick="generateCode()">Get Invite Code</button><br>
-                    <button onclick="copyText()">Copy Code</button>
+                    <button onclick="copyText()">Copy Code</button><br>
+                    <button onclick="nav()">Continue</button>
 
                     <div class="snackbar" id="snackbar">Copied invite code to clipboard</div>
 

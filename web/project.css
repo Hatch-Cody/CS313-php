@@ -282,6 +282,14 @@ body {
 	background-color: rgb(131, 90, 116);
 }
 
+.WideInfoBox {
+	background-color: #3E6073;
+	padding: 		15px;
+	border-radius: 	5px;
+	margin: 		5vw;
+	color: white;
+}
+
 .fullwidthBanner {
 	background-color: #000000;
 	width: auto;

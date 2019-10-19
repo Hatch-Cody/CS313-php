@@ -20,7 +20,7 @@ include_once 'includes/dbh.php';
         <div class="main">
             <h1 style="text-align: center;">Night Saver</h1>
             <div class="flexContainer">
-                <div class="infoBox" id="infoBox">
+                <div class="wideInfoBox" id="infoBox">
 
 
                     <?php
@@ -47,7 +47,8 @@ include_once 'includes/dbh.php';
 
                     echo '<h1>Group Choices</h1>';
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' . $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
+                        echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' . 
+                        $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
                     }
                     ?>
 

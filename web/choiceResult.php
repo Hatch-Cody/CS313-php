@@ -20,7 +20,7 @@ include_once 'includes/dbh.php';
         <div class="main">
             <h1 style="text-align: center;">Night Saver</h1>
             <div class="flexContainer">
-                <div class="wideInfoBox" id="infoBox">
+                <div class="wideInfoBox" id="">
 
 
                     <?php

@@ -28,7 +28,7 @@
 			setTimeout(function () { x.className = x.className.replace("show", ""); }, 2000);
 
 			// wait two seconde then navigate to new page
-			setTimeout(function () { window.location.assign("choicesForm.html"); }, 2000);
+			setTimeout(function () { window.location.assign("choiceResult.php"); }, 2000);
 
 		}
 

@@ -28,6 +28,8 @@
 			setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 
 			nav();
+
+			return false;
 		}
 
 		function nav() {
@@ -46,11 +48,11 @@
 	</div>
 
 	<div class="page">
+
 		<div class="main">
 			<h1 style="text-align: center;">Night Saver</h1>
 			<div class="flexContainer">
 				<form class="infoBox">
-
 					<input type="text" id="name" placeholder="Name"><br>
 					<input type="text" id="one" placeholder="First Choice"><br>
 					<input type="text" id="two" placeholder="Second Choice"><br>
@@ -60,7 +62,6 @@
 					<input type="submit" onclick="submitChoices()">
 					
 					<div class="snackbar" id="snackbar">Choices have been submitted</div>
-					
 				</form>
 			</div>
 		</div>
@@ -68,6 +69,7 @@
 		<footer class="footer">
 			Page Designed By: Cody Hatch
 		</footer>
+
 	</div>
 </body>
 

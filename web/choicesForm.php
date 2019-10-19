@@ -25,13 +25,10 @@ include_once 'includes/dbh.php';
 			// show snackbar alert that the choices have been sent
 			var x = document.getElementById("snackbar");
 			x.className = "show";
-			setTimeout(function() {
-				x.className = x.className.replace("show", "");
-			}, 3000);
+			
+			setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
 
 			nav();
-
-			return false;
 		}
 
 		function nav() {
@@ -104,7 +101,7 @@ include_once 'includes/dbh.php';
 					<input type="text" id="three" placeholder="Third Choice"><br>
 					<input type="text" id="least" placeholder="Least Favorite">
 					<br>
-					<input type="submit" onclick="submitChoices()">
+					<input type="button" onclick="submitChoices()">
 
 
 				</form>

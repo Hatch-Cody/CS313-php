@@ -16,33 +16,51 @@ include_once 'includes/dbh.php';
 
 <body>
 
-    <?php
-    try {
-        $dbUrl = getenv('DATABASE_URL');
+    <div class="page">
+        <div class="main">
+            <h1 style="text-align: center;">Night Saver</h1>
+            <div class="flexContainer">
+                <div class="infoBox" id="infoBox">
 
-        $dbOpts = parse_url($dbUrl);
 
-        $dbHost = $dbOpts["host"];
-        $dbPort = $dbOpts["port"];
-        $dbUser = $dbOpts["user"];
-        $dbPassword = $dbOpts["pass"];
-        $dbName = ltrim($dbOpts["path"], '/');
+                    <?php
+                    try {
+                        $dbUrl = getenv('DATABASE_URL');
 
-        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+                        $dbOpts = parse_url($dbUrl);
 
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $ex) {
-        echo 'Error!: ' . $ex->getMessage();
-        die();
-    }
+                        $dbHost = $dbOpts["host"];
+                        $dbPort = $dbOpts["port"];
+                        $dbUser = $dbOpts["user"];
+                        $dbPassword = $dbOpts["pass"];
+                        $dbName = ltrim($dbOpts["path"], '/');
 
-    $statement = $db->query('SELECT username, num_one, num_two, num_three, least_favorite FROM group_member');
+                        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-    echo '<h1>Group Choices</h1>';
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' . $row['num_three'] . $row['least_favorite'] . '"<br/>';
-    }
-    ?>
+                        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    } catch (PDOException $ex) {
+                        echo 'Error!: ' . $ex->getMessage();
+                        die();
+                    }
+
+                    $statement = $db->query('SELECT username, num_one, num_two, num_three, least_favorite FROM group_member');
+
+                    echo '<h1>Group Choices</h1>';
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' . $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
+                    }
+                    ?>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            Page Designed By: Cody Hatch
+        </footer>
+    </div>
 
 </body>
 

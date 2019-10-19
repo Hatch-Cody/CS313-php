@@ -32,7 +32,7 @@
 
 		function nav() {
             // wait two seconde then navigate to new page
-            setTimeout(function () { window.location.assign("choicesForm.php"); }, 1000);
+            setTimeout(function () { window.location.assign("choiceResult.php"); }, 1000);
         }
 
 	</script>

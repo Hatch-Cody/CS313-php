@@ -22,7 +22,7 @@ include_once 'includes/dbh.php';
 
     <div class="page">
         <div class="main">
-            <h1 style="text-align: center;">Night Saver</h1>
+            <h1 style="text-align: center;">Group Choice</h1>
             <div class="flexContainer">
                 <div class="wideInfoBox">
 
@@ -56,9 +56,21 @@ include_once 'includes/dbh.php';
                     FROM group_member');
 
                     echo '<h1>Group Choices</h1>';
+
+                    $index = 0;
+                    //$choices = array([][]);
+
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+
+                        $row['num_one'];
+                        $row['num_two'];
+                        $row['num_three'];
+                        $row['least_favorite'];
+
                         echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
+                            $index += 1;
+                            
                     }
                     ?>
 

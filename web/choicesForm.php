@@ -1,7 +1,3 @@
-<?php
-include_once 'includes/dbh.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,7 +89,7 @@ include_once 'includes/dbh.php';
 	<div class="page">
 
 		<div class="main">
-			<h1 style="text-align: center;">Night Saver</h1>
+			<h1 style="text-align: center;">Group Choice</h1>
 			<div class="flexContainer">
 				<form class="infoBox">
 					<input type="text" id="name" placeholder="Name"><br>

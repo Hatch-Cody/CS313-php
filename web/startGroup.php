@@ -57,7 +57,7 @@
 
     <div class="page">
         <div class="main">
-            <h1 style="text-align: center;">Night Saver</h1>
+            <h1 style="text-align: center;">Group Choice</h1>
             <div class="flexContainer">
                 <div class="infoBox" id="infoBox">
                     <p>Here is your invite code:</p>

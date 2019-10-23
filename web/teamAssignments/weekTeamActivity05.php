@@ -87,14 +87,14 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
     ?>
 
-    <input type="submit">
+    <input type="submit" value="Add to Database">
   </form>
 
-  <script>
+  <!-- <script>
     function bobTheQueryBuilder() {
-      var book = document.getElementById('book').value;
+      var book    = document.getElementById('book').value;
       var chapter = document.getElementById('chapter').value;
-      var verse = document.getElementById('verse').value;
+      var verse   = document.getElementById('verse').value;
       var content = document.getElementById('content').value;
 
       var query = `write.php?book=${book}&chapter=${chapter}&verse=${verse}&content=${content}`;
@@ -107,6 +107,6 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
       xhr.open("POST", query, false);
       xhr.send();
     }
-  </script>
+  </script> -->
 </body>
 </html>

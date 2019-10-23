@@ -40,28 +40,23 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
     Verse:   <input type="text" id="verse"><br>
     Content: <br><textarea rows="10" cols="50" id="content"></textarea><br> -->
 
+    <label for="txtBooK">Book</label><br>
     <input type="text" id="txtBook" name="txtBook">
-    <label for="txtBooK">Book</label>
     <br><br>
-
+    
+    <label for="txtChapter">Chapter</label><br>
     <input type="text" id="txtChapter" name="txtChapter">
-    <label for="txtChapter">Chapter</label>
     <br><br>
-
+    
+    <label for="txtVerse">Verse</label><br>
     <input type="text" id="txtVerse" name="txtVerse">
-    <label for="txtVerse">Verse</label>
     <br><br>
 
     <label for="txtContent">Content:</label><br>
     <textarea id="txtContent" name="txtContent" rows="4" cols="50"></textarea>
     <br><br>
 
-    <label>Topics:</label><br>
-
-
-
-
-
+    <label>Topics:</label><br><br>
 
     <?php
 
@@ -82,7 +77,6 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
         // we use "chkTopics" followed by the id, so that it becomes something like
         // "chkTopics1" and "chkTopics2", etc.
         echo "<label for='chkTopics$id'>$name</label><br>";
-        echo "<br>";
       }
     } catch (PDOException $ex) {
       echo "Error connecting to DB. Details: $ex";

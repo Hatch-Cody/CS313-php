@@ -34,7 +34,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 <head></head>
 
 <body>
-  <form action="bobTheQueryBuilder()" method="get"><br>
+  <form action="write.php" method="POST"><br>
     <!-- Book:    <input type="text" id="book"><br>
     Chapter: <input type="text" id="chapter"><br>
     Verse:   <input type="text" id="verse"><br>

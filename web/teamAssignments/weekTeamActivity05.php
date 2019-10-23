@@ -82,14 +82,10 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
       echo "Error connecting to DB. Details: $ex";
       die();
     }
+
+    echo "<br>"
+
     ?>
-
-
-
-
-
-
-
 
     <input type="submit">
   </form>
@@ -112,7 +108,5 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
       xhr.send();
     }
   </script>
-
 </body>
-
 </html>

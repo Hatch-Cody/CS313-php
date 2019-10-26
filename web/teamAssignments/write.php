@@ -15,10 +15,12 @@ try {
   $statement = $db->prepare($query);
 
   // bind values to the placeholders
-  $statement->bindValue(':book', $book);
+  $statement->bindValue(':book',    $book);
   $statement->bindValue(':chapter', $chapter);
-  $statement->bindValue(':verse', $verse);
+  $statement->bindValue(':verse',   $verse);
   $statement->bindValue(':content', $content);
+
+  echo
 
   $statement->execute();
 

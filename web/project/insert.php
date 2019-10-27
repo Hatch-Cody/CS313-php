@@ -1,7 +1,5 @@
 <?php
 // get the data from the POST
-$title = $_POST['title'];
-$note = $_POST['note'];
 $group_id = $_POST['group_id'];
 
 date_default_timezone_set("America/Denver");

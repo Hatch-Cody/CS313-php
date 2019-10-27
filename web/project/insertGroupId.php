@@ -2,9 +2,6 @@
 // get the data from the POST
 $group_id = $_POST['group_id'];
 
-date_default_timezone_set("America/Denver");
-$time = date("h:i:sa");
-
 require("databaseConnect.php");
 $db = get_db();
 

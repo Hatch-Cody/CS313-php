@@ -1,10 +1,6 @@
 <?php
 // get the data from the POST
 $group_id = $_POST['group_id'];
-$num_one = "Arbys";
-$num_two = "Panda";
-$num_three = "Cafe Rio";
-
 
 require("dbConnect.php");
 $db = get_db();

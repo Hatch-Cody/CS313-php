@@ -308,13 +308,19 @@ body {
 	border: 		2px solid #b2b2b2;
 }
 
-.button {
-	color: white;
-	background-color: forestgreen;
-	border-radius: 	10%;
-	border: none;
-	padding: 		20px;
-	margin-right: 	40%
+button {
+	color: #ffffff;
+	background-color:#522C44;
+	font-size: 15px;
+	font-family: roboto;
+	padding: 15px;
+	border-radius: 12px;
+	border: 2px solid rgb(117, 56, 95);
+}
+
+button:hover {
+	color: #ffffff;
+	background-color: rgb(131, 90, 116);
 }
 
 .table {

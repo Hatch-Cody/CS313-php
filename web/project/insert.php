@@ -12,7 +12,7 @@ $db = get_db();
 
 try
 {
-   $query = 'INSERT INTO group(group_id, title, content, date, time) VALUES(:group_id, :title, :content, :date, :time)';
+   $query = 'INSERT INTO group(group_id) VALUES(:group_id)';
    $statement = $db->prepare($query);
    $statement->bindValue(':group_id', $group_id);
    $statement->execute();

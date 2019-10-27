@@ -14,7 +14,7 @@ $db = get_db();
 
 try {
 
-   $query = 'INSERT INTO "group_member" (group_id, choice_one, choice_two, choice_three, least_favorite, username, date) VALUES(:group_id, :num_one, :num_two, :num_three, :least_favorite :username :date)';
+   $query = 'INSERT INTO "group_member" (group_id, choice_one, choice_two, choice_three, least_favorite, username) VALUES(:group_id, :num_one, :num_two, :num_three, :least_favorite :username)';
    $statement = $db->prepare($query);
    $statement->bindValue(':group_id',       $group_id);
    $statement->bindValue(':num_one',        $num_one);

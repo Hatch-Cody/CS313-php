@@ -9,7 +9,7 @@ $least_favorite = $_POST['least_favorite'];
 
 date_default_timezone_set("America/Denver");
 
-require("databaseConnect.php");
+require("dbConnect.php");
 $db = get_db();
 
 try

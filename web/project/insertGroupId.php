@@ -1,6 +1,6 @@
 <?php
 // get the data from the POST
-$group_id = $_POST['group_id'];
+$group_id = $_GET['group_id'];
 
 	require("dbConnect.php");
     $db = get_db();

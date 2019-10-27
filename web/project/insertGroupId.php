@@ -2,28 +2,9 @@
 // get the data from the POST
 $group_id = $_POST['group_id'];
 
-
-$db;
-
-try {
-    $dbUrl = getenv('DATABASE_URL');
-
-    $dbOpts = parse_url($dbUrl);
-
-    $dbHost = $dbOpts["host"];
-    $dbPort = $dbOpts["port"];
-    $dbUser = $dbOpts["user"];
-    $dbPassword = $dbOpts["pass"];
-    $dbName = ltrim($dbOpts["path"], '/');
-
-    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $ex) {
-    echo 'Error!: ' . $ex->getMessage();
-    die();
-}
-
+	require("dbConnect.php");
+    $db = get_db();
+    
 try {
     $query = 'INSERT INTO group(group_id) VALUES(:group_id)';
     $statement = $db->prepare($query);

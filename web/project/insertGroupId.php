@@ -2,8 +2,8 @@
 // get the data from the POST
 $group_id = $_POST['group_id'];
 
-require("databaseConnect.php");
-$db = get_db();
+//require("databaseConnect.php");
+//$db = get_db();
 
 // try
 // {

@@ -31,9 +31,10 @@ $group_id = $_GET['group_id'];
                     require("dbConnect.php");
                     $db = get_db();
 
-                    echo '<p>group_id == '.$group_id.'</p>';
-                    
-                    $statement = $db->query('SELECT username, num_one, num_two, num_three, least_favorite FROM "group_member" WHERE group_id = :group_id');
+                    echo '<p>group_id == ' . $group_id . '</p>';
+
+                    $query = 'SELECT * FROM "group_member" WHERE group_id = :group_id';
+                    $statement = $db->prepare($query);
                     $statement->bindValue(':group_id', $group_id);
                     $statement->execute();
 

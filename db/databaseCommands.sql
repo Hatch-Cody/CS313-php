@@ -1,7 +1,14 @@
-CREATE TABLE "group_member" ("member_id"  serial PRIMARY KEY, "num_one" varchar, "num_two" varchar, "num_three" varchar, "least_favorite" varchar, "username" varchar, "group_id" varchar); 
+CREATE TABLE "group_member" (
+    "member_id"  serial PRIMARY KEY, 
+    "num_one" varchar, 
+    "num_two" varchar, 
+    "num_three" varchar, 
+    "least_favorite" varchar, 
+    "username" varchar, 
+    "group_id" varchar); 
 
 CREATE TABLE "group" (   
-    "group_id"     serial PRIMARY KEY,   
+    "group_id"     varchar PRIMARY KEY,   
     "choice_one"   varchar,   
     "choice_two"   varchar,   
     "choice_three" varchar,

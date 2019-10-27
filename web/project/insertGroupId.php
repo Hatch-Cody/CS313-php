@@ -19,29 +19,24 @@ try {
     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} 
-catch (PDOException $ex) 
-{
+} catch (PDOException $ex) {
     echo 'Error!: ' . $ex->getMessage();
     die();
 }
 
-try
-{
-   $query = "INSERT INTO group(group_id) VALUES(:group_id)";
-   $statement = $db->prepare($query);
-   $statement->bindValue(':group_id', $group_id);
-   $statement->execute();
+try {
+    $query = 'INSERT INTO group(group_id) VALUES(:group_id)';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':group_id', $group_id);
+    $statement->execute();
 
-	// Now we bind the values to the placeholders. This does some nice things
-	// including sanitizing the input with regard to sql commands.
-}
-catch (Exception $ex)
-{
-	// Please be aware that you don't want to output the Exception message in
-	// a production environment
-	echo "Error with DB. Details: $ex";
-	die();
+    // Now we bind the values to the placeholders. This does some nice things
+    // including sanitizing the input with regard to sql commands.
+} catch (Exception $ex) {
+    // Please be aware that you don't want to output the Exception message in
+    // a production environment
+    echo "Error with DB. Details: $ex";
+    die();
 }
 
 // finally, redirect them to a new page to actually show the topics

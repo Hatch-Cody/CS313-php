@@ -60,10 +60,13 @@
             <div class="flexContainer">
                 <div class="infoBox" id="infoBox">
 
+
+
+
                     <form action="insertGroupId.php" method="get">
                         <div>
                             <label for="inviteCode">Invite Code:</label><br>
-                            <input type="text" id="group_id" name="group_id" disabled>
+                            <input type="text" id="group_id" name="group_id">
                         </div>                        
                         <br>
                         <p>Send this code to your group</p>
@@ -71,6 +74,11 @@
                         <button type="submit">Continue</button>
 
                     </form>
+
+
+
+
+
 
                     <br>
                     <button onclick="copyText()">Copy Code</button><br>

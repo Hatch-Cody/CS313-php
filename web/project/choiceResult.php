@@ -1,12 +1,15 @@
 <?php
-include_once 'includes/dbh.php';
+    $group_id = $_GET['group_id'];
+
+    require("dbConnect.php");
+    $db = get_db();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Night Saver</title>
+    <title>Group Choice</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +19,9 @@ include_once 'includes/dbh.php';
 
 <body>
     <!-- Nav Bar -->
-	<div class="topnav">
-		<a class="active" href="projectHome.html">Home</a>
-	</div>
+    <div class="topnav">
+        <a class="active" href="projectHome.html">Home</a>
+    </div>
 
     <div class="page">
         <div class="main">
@@ -53,7 +56,8 @@ include_once 'includes/dbh.php';
                     num_two, 
                     num_three, 
                     least_favorite 
-                    FROM group_member');
+                    FROM group_member
+                    WHERE');
 
                     echo '<h1>Group Choices</h1>';
 
@@ -69,8 +73,7 @@ include_once 'includes/dbh.php';
 
                         echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
-                            $index += 1;
-                            
+                        $index += 1;
                     }
                     ?>
 

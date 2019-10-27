@@ -7,13 +7,10 @@ $num_two        = $_POST['num_two'];
 $num_three      = $_POST['num_three'];
 $least_favorite = $_POST['least_favorite'];
 
-date_default_timezone_set("America/Denver");
-
 require("dbConnect.php");
 $db = get_db();
 
 try {
-
    $query = 'INSERT INTO "group_member" (group_id, num_one, num_two, num_three, least_favorite, username) VALUES(:group_id, :num_one, :num_two, :num_three, :least_favorite, :username)';
    $statement = $db->prepare($query);
    $statement->bindValue(':group_id',       $group_id);
@@ -24,8 +21,6 @@ try {
    $statement->bindValue(':username',       $username);
    $statement->execute();
 
-   // Now we bind the values to the placeholders. This does some nice things
-   // including sanitizing the input with regard to sql commands.
 } catch (Exception $ex) {
    // Please be aware that you don't want to output the Exception message in
    // a production environment
@@ -33,13 +28,10 @@ try {
    die();
 }
 
-// finally, redirect them to a new page to actually show the topics
-header("Location: choiceResult.php");
+// redirect to new page
+header("Location: choiceResult.php?group_id=$group_id");
 
-die(); // we always include a die after redirects. In this case, there would be no
-       // harm if the user got the rest of the page, because there is nothing else
-       // but in general, there could be things after here that we don't want them
-       // to see.
+die();
 
 
 

@@ -1,8 +1,12 @@
+<?php
+	$group_id = $_GET['group_id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<title>Night Saver</title>
+	<title>Group Choice</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +14,14 @@
 
 	<script>
 		function submitChoices() {
-
 			// show snackbar alert that the choices have been sent
 			var x = document.getElementById("snackbar");
 			x.className = "show";
 
 			setTimeout(function() {
 				x.className = x.className.replace("show", "");
-			}, 3000);		
+			}, 3000);
 		}
-
 	</script>
 
 	<style>
@@ -102,31 +104,21 @@
 	</div>
 
 	<div class="page">
-
-		<?php
-			$group_id = $_GET['group_id'];
-		?>
-
 		<div class="main">
 			<h1 style="text-align: center;">Group Choice</h1>
 			<div class="flexContainer">
-
-
 				<form class="infoBox" action="insert.php" method="POST">
 					<?php
-							echo '<input type="text" name="group_id" value="'.$group_id.'"><br>'
-
+					echo '<input type="text" name="group_id" value="' . $group_id . '"><br>'
 					?>
-					<input type="text" name="username"  placeholder="Name"><br>
-					<input type="text" name="num_one"   placeholder="First Choice"><br>
-					<input type="text" name="num_two"   placeholder="Second Choice"><br>
+					<input type="text" name="username" placeholder="Name"><br>
+					<input type="text" name="num_one" placeholder="First Choice"><br>
+					<input type="text" name="num_two" placeholder="Second Choice"><br>
 					<input type="text" name="num_three" placeholder="Third Choice"><br>
 					<input type="text" name="least_favorite" placeholder="Least Favorite">
 					<br>
 					<input type="submit" onclick="submitChoices()" value="Submit">
 				</form>
-
-
 			</div>
 		</div>
 

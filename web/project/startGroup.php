@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Group Saver</title>
+    <title>Group Choice</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,6 @@
             return ans;
         }
     </script>
-
 </head>
 
 <body onload="generateCode()">
@@ -59,31 +58,19 @@
             <h1 style="text-align: center;">Group Choice</h1>
             <div class="flexContainer">
                 <div class="infoBox" id="infoBox">
-
-
-
-
                     <form action="insertGroupId.php" method="POST">
                         <div>
                             <label for="inviteCode">Invite Code:</label><br>
                             <input type="text" id="group_id" name="group_id">
-                        </div>                        
+                        </div>
                         <br>
                         <p>Send this code to your group</p>
-                        
+
                         <button type="submit">Continue</button>
-
                     </form>
-
-
-
-
-
 
                     <br>
                     <button onclick="copyText()">Copy Code</button><br>
-
-
                     <div class="snackbar" id="snackbar">Copied invite code to clipboard</div>
 
                 </div>

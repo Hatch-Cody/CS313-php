@@ -23,7 +23,7 @@ ALTER TABLE "group_member" ADD FOREIGN KEY ("group_id") REFERENCES "group" ("gro
 
 INSERT INTO "group" (group_id, choice_one, choice_two, choice_three) VALUES ('1a2v3f', 'choiceOne', 'choiceTwo', 'choiceThree');
 
-INSERT INTO "group_member" (num_one, num_two, num_three, least_favorite, username, group_id) VALUES ('McDonalds', 'Little Cesars', 'Jimmy Johns', 'Wendys', 'James', '123456');
-INSERT INTO "group_member" (num_one, num_two, num_three, least_favorite, username, group_id) VALUES ('Dominos', 'Five Guys', 'Arbys', 'Subway', 'Greg', '123456');
-INSERT INTO "group_member" (num_one, num_two, num_three, least_favorite, username, group_id) VALUES ('Olive Garden', 'Hickory', 'Papa Johns', 'Dominos', 'Lisa', '123456');
-INSERT INTO "group_member" (num_one, num_two, num_three, least_favorite, username, group_id) VALUES ('Arbys', 'Panda Express', 'Hickory', 'McDonnalds', 'Chase', '123456');
+INSERT INTO "group_member" (num_one, num_two, num_three, least_favorite, username, group_id) VALUES ('McDonalds', 'Little Cesars', 'Jimmy Johns', 'Wendys', 'James', '1a2v3f');
+INSERT INTO "group_member" (num_one, num_two, num_three, least_favorite, username, group_id) VALUES ('Dominos', 'Five Guys', 'Arbys', 'Subway', 'Greg', '1a2v3f');
+INSERT INTO "group_member" (num_one, num_two, num_three, least_favorite, username, group_id) VALUES ('Olive Garden', 'Hickory', 'Papa Johns', 'Dominos', 'Lisa', '1a2v3f');
+INSERT INTO "group_member" (num_one, num_two, num_three, least_favorite, username, group_id) VALUES ('Arbys', 'Panda Express', 'Hickory', 'McDonnalds', 'Chase', '1a2v3f');

@@ -44,6 +44,8 @@ $group_id = $_POST['group_id'];
 
                     echo '<h1>Group Choices</h1>';
 
+                    echo 'group_id == '.$group_id;
+
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
                         $row['num_one'];

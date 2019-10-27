@@ -141,6 +141,7 @@
                         <button type="submit">Continue</button><br>
                     </form>
 
+                    <br>
                     <button onclick="copyText()">Copy Code</button><br>
 
                     <div class="snackbar" id="snackbar">Copied invite code to clipboard</div>

@@ -1,8 +1,3 @@
-<?php
-require("dbConnect.php");
-$db = get_db();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -130,7 +125,7 @@ $db = get_db();
 		<div class="main">
 			<h1 style="text-align: center;">Group Choice</h1>
 			<div class="flexContainer">
-				<form class="infoBox">
+				<form class="infoBox" action="insert.php" method="POST">
 					<input type="text" id="name" placeholder="Name"><br>
 					<input type="text" id="one" placeholder="First Choice"><br>
 					<input type="text" id="two" placeholder="Second Choice"><br>

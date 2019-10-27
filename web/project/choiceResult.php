@@ -1,8 +1,5 @@
 <?php
 $group_id = $_GET['group_id'];
-
-require("dbConnect.php");
-$db = get_db();
 ?>
 
 <!DOCTYPE html>
@@ -31,11 +28,14 @@ $db = get_db();
 
 
                     <?php
+                    require("dbConnect.php");
+                    $db = get_db();
+
                     echo '<p>group_id == '.$group_id.'</p>';
                     
                     $statement = $db->query('SELECT username, num_one, num_two, num_three, least_favorite FROM "group_member" WHERE group_id = :group_id');
                     $statement->bindValue(':group_id', $group_id);
-                    $notesStatement->execute();
+                    $statement->execute();
 
                     echo '<h1>Group Choices</h1>';
 

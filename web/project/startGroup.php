@@ -66,8 +66,14 @@ $db = get_db();
                 <div class="infoBox" id="infoBox">
 
                     <form action="insert.php" method="POST">
+
                         <p>Here is your invite code:</p>
-                        <input type="text" id="group_id" name="group_id" disabled>
+
+                        <div>
+                            <label for="inviteCode">Title</label>
+                            <input type="text" id="group_id" name="group_id" disabled>
+                        </div>
+                        
                         <br>
                         <p>Send this code to your group</p>
 

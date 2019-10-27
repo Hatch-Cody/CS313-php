@@ -133,17 +133,15 @@
                     <form action="insertGroupId.php" method="POST">
                         <div>
                             <label for="inviteCode">Invite Code:</label><br>
-                            <input type="text" id="group_id" name="group_id">
+                            <input type="text" id="group_id" name="group_id"><br>
+                            <button onclick="copyText()">Copy Code</button><br>
                         </div>
                         <br>
                         <p>Send this code to your group</p>
 
                         <button type="submit">Continue</button><br>
                     </form>
-
-                    <br>
-                    <button onclick="copyText()">Copy Code</button><br>
-
+                    
                     <div class="snackbar" id="snackbar">Copied invite code to clipboard</div>
 
                 </div>

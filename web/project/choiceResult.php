@@ -36,7 +36,7 @@ $group_id = $_GET['group_id'];
                     $statement->bindValue(':group_id', $group_id);
                     $statement->execute();
 
-                    echo '<h1>Group Choices</h1>';
+                    echo '<h1>Group Results</h1>';
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
@@ -46,7 +46,7 @@ $group_id = $_GET['group_id'];
                         $row['least_favorite'];
 
                         echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
-                            $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
+                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
                     }
                     ?>
 

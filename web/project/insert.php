@@ -1,7 +1,7 @@
 <?php
 // get the data from the POST
 $group_id       = $_POST['group_id'];
-$username       = $_POST['name'];
+$username       = $_POST['username'];
 $num_one        = $_POST['num_one'];
 $num_two        = $_POST['num_two'];
 $num_three      = $_POST['num_three'];

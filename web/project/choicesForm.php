@@ -117,7 +117,7 @@
 							echo '<input type="text" name="group_id" value="'.$group_id.'"><br>'
 
 					?>
-					<input type="text" name="name"  placeholder="Name"><br>
+					<input type="text" name="username"  placeholder="Name"><br>
 					<input type="text" name="num_one"   placeholder="First Choice"><br>
 					<input type="text" name="num_two"   placeholder="Second Choice"><br>
 					<input type="text" name="num_three" placeholder="Third Choice"><br>

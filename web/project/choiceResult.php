@@ -37,7 +37,8 @@ $group_id = $_POST['group_id'];
                     num_two, 
                     num_three, 
                     least_favorite 
-                    FROM group_member');
+                    FROM group_member
+                    WHERE group_id = $group_id');
 
                     echo '<h1>Group Choices</h1>';
 

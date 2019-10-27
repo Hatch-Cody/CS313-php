@@ -8,7 +8,6 @@ $num_three      = $_POST['num_three'];
 $least_favorite = $_POST['least_favorite'];
 
 date_default_timezone_set("America/Denver");
-$time = date("h:i:sa");
 
 require("databaseConnect.php");
 $db = get_db();

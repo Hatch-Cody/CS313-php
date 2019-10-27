@@ -11,30 +11,15 @@
 	<script>
 		function submitChoices() {
 
-			/* Get the text field */
-			var name = document.getElementById("name");
-			var one = document.getElementById("one");
-			var two = document.getElementById("two");
-			var three = document.getElementById("three");
-			var least = document.getElementById("least");
-
 			// show snackbar alert that the choices have been sent
 			var x = document.getElementById("snackbar");
 			x.className = "show";
 
 			setTimeout(function() {
 				x.className = x.className.replace("show", "");
-			}, 3000);
-
-			nav();
+			}, 3000);		
 		}
 
-		function nav() {
-			// wait two seconde then navigate to new page
-			setTimeout(function() {
-				window.location.assign("choiceResult.php");
-			}, 3000);
-		}
 	</script>
 
 	<style>
@@ -119,23 +104,29 @@
 	<div class="page">
 
 		<?php
-			$courseId = $_GET['group_id'];
+			$group_id = $_GET['group_id'];
 		?>
 
 		<div class="main">
 			<h1 style="text-align: center;">Group Choice</h1>
 			<div class="flexContainer">
+
+
 				<form class="infoBox" action="insert.php" method="POST">
-					<input type="text" id="name" placeholder="Name"><br>
-					<input type="text" id="one" placeholder="First Choice"><br>
-					<input type="text" id="two" placeholder="Second Choice"><br>
-					<input type="text" id="three" placeholder="Third Choice"><br>
-					<input type="text" id="least" placeholder="Least Favorite">
+					<?php
+							echo '<input type="text" name="group_id" value="'.$group_id.'"><br>'
+
+					?>
+					<input type="text" name="name"  placeholder="Name"><br>
+					<input type="text" name="one"   placeholder="First Choice"><br>
+					<input type="text" name="two"   placeholder="Second Choice"><br>
+					<input type="text" name="three" placeholder="Third Choice"><br>
+					<input type="text" name="least" placeholder="Least Favorite">
 					<br>
 					<input type="button" onclick="submitChoices()" value="Submit">
-
-
 				</form>
+
+
 			</div>
 		</div>
 

@@ -63,7 +63,7 @@
 
 
 
-                    <form action="insertGroupId.php" method="get">
+                    <form action="insertGroupId.php" method="GET">
                         <div>
                             <label for="inviteCode">Invite Code:</label><br>
                             <input type="text" id="group_id" name="group_id">

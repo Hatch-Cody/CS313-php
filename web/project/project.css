@@ -13,14 +13,14 @@ html, body {
 }
 
 body {
-	background-color: #2c4452;
+	background-color: #0b0c10;
 	margin: 0;
 	font-family: roboto;
 }
 
 .footer {
 	display: flex;
-	background-color: #333333;
+	background-color: #1f2833;
 	color: white;
 	flex-shrink:    1;
 	left:           0;
@@ -107,7 +107,7 @@ body {
 ***************************************/
 .topnav {
 	overflow: hidden;
-	background-color: #333;
+	background-color: #1f2833;
 }
 
 .topnav a {
@@ -120,12 +120,12 @@ body {
 }
 
 .topnav a:hover {
-	background-color: #ddd;
+	background-color: #39424d;
 	color: black;
 }
 
 .topnav a.active {
-	background-color: #09366d;
+	background-color: #45a29e;
 	color: white;
 }
 
@@ -232,7 +232,7 @@ body {
 }
 
 .flexContainer > div {
-	background-color: #516d7d;
+	background-color: #1f2833;
 	padding: 		15px;
 	border-radius: 	5px;
 	margin: 		2.5vw;
@@ -242,7 +242,7 @@ body {
 }
 
 .form {
-	background-color: #55565b;
+	background-color: #1f2833;
 	padding: 		15px;
 	border-radius: 	25px;
 	width: 			50%;
@@ -251,7 +251,7 @@ body {
 }
 
 .infoBox {
-	background-color: #3E6073;
+	background-color: #1f2833;
 	padding: 		15px;
 	border-radius: 	5px;
 	margin: 		2.5vw;

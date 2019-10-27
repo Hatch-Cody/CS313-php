@@ -32,20 +32,13 @@ $group_id = $_POST['group_id'];
 
                     <?php
                     echo '<p>group_id == '.$group_id.'</p>';
-
-                    $statement = $db->query('SELECT 
-                    username, 
-                    num_one, 
-                    num_two, 
-                    num_three, 
-                    least_favorite 
-                    FROM "group_member"
-                    WHERE group_id = :group_id');
-
+                    
+                    $statement = $db->query('SELECT username, num_one, num_two, num_three, least_favorite FROM "group_member" WHERE group_id = :group_id');
                     $statement->bindValue(':group_id', $group_id);
+                    $notesStatement->execute();
 
                     echo '<h1>Group Choices</h1>';
-                    
+
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
                         $row['num_one'];

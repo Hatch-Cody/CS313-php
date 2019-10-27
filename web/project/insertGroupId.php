@@ -10,9 +10,9 @@ require("dbConnect.php");
 $db = get_db();
 
 try {
-    $query = 'INSERT INTO "group" (choice_one, choice_two, choice_three) VALUES(:num_one, :num_two, :num_three)';
+    $query = 'INSERT INTO "group" (group_id, choice_one, choice_two, choice_three) VALUES(:group_id, :num_one, :num_two, :num_three)';
     $statement = $db->prepare($query);
-    //$statement->bindValue(':group_id', $group_id);
+    $statement->bindValue(':group_id', $group_id);
     $statement->bindValue(':num_one', $num_one);
     $statement->bindValue(':num_two', $num_two);
     $statement->bindValue(':num_three', $num_three);

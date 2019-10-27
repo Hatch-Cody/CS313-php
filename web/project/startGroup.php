@@ -1,6 +1,6 @@
 <?php
-	require("databaseConnect.php");
-	$db = get_db();
+require("databaseConnect.php");
+$db = get_db();
 ?>
 
 <!DOCTYPE html>
@@ -15,19 +15,16 @@
 
     <script>
         function copyText() {
-            /* Get the text field */
             var copyText = document.getElementById("group_id");
 
-            /* Select the text field */
             copyText.select();
-            copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+            copyText.setSelectionRange(0, 99999);
 
-            /* Copy the text inside the text field */
             document.execCommand("copy");
 
-            // show snackbar alert that the code was copied
             var x = document.getElementById("snackbar");
             x.className = "show";
+
             setTimeout(function() {
                 x.className = x.className.replace("show", "");
             }, 2000);
@@ -68,7 +65,7 @@
             <div class="flexContainer">
                 <div class="infoBox" id="infoBox">
 
-                    <form action="insert.php" method="post">
+                    <form action="insert.php" method="get">
                         <p>Here is your invite code:</p>
                         <input type="text" id="group_id" name="group_id" disabled>
                         <br>

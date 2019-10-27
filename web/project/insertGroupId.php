@@ -13,9 +13,9 @@ try {
     $query = 'INSERT INTO "group" (choice_one, choice_two, choice_three) VALUES(:num_one, :num_two, :num_three)';
     $statement = $db->prepare($query);
     //$statement->bindValue(':group_id', $group_id);
-    //$statement->bindValue(':num_one', $num_one);
-    //$statement->bindValue(':num_two', $num_two);
-    //$statement->bindValue(':num_three', $num_three);
+    $statement->bindValue(':num_one', $num_one);
+    $statement->bindValue(':num_two', $num_two);
+    $statement->bindValue(':num_three', $num_three);
     $statement->execute();
 
     // Now we bind the values to the placeholders. This does some nice things

@@ -1,70 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Week 6 class activity</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Group Saver</title>
 
-	<script>
-		function copyText() {
-			var copyText = document.getElementById("group_id");
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
 
-			copyText.select();
-			copyText.setSelectionRange(0, 99999);
+    <script>
+        function copyText() {
+            var copyText = document.getElementById("group_id");
 
-			document.execCommand("copy");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
 
-			var x = document.getElementById("snackbar");
-			x.className = "show";
+            document.execCommand("copy");
 
-			setTimeout(function() {
-				x.className = x.className.replace("show", "");
-			}, 2000);
-		}
+            var x = document.getElementById("snackbar");
+            x.className = "show";
 
-		function nav() {
-			// wait two seconde then navigate to new page
-			setTimeout(function() {
-				window.location.assign("choicesForm.php");
-			}, 1000);
-		}
+            setTimeout(function() {
+                x.className = x.className.replace("show", "");
+            }, 2000);
+        }
 
-		function generateCode() {
-			var len = 7;
-			var arr = "123456789abcdefghijklmnopqrstuvwxyz";
-			var ans = '';
-			for (var i = len; i > 0; i--) {
-				ans +=
-					arr[Math.floor(Math.random() * arr.length)];
-			}
-			document.getElementById("group_id").value = ans;
+        function nav() {
+            // wait two seconde then navigate to new page
+            setTimeout(function() {
+                window.location.assign("choicesForm.php");
+            }, 1000);
+        }
 
-			return ans;
-		}
-	</script>
+        function generateCode() {
+            var len = 7;
+            var arr = "123456789abcdefghijklmnopqrstuvwxyz";
+            var ans = '';
+            for (var i = len; i > 0; i--) {
+                ans +=
+                    arr[Math.floor(Math.random() * arr.length)];
+            }
+            document.getElementById("group_id").value = ans;
+
+            return ans;
+        }
+    </script>
 
 </head>
 
 <body onload="generateCode()">
-	<div class="container">
+    <!-- Nav Bar -->
+    <div class="topnav">
+        <a href="projectHome.html">Home</a>
+    </div>
 
-		<form action="insert.php" method="POST">
+    <div class="page">
+        <div class="main">
+            <h1 style="text-align: center;">Group Choice</h1>
+            <div class="flexContainer">
+                <div class="infoBox" id="infoBox">
 
-			<div class="form-row">
+                    <form action="insert.php" method="POST">
 
-				<div class="form-group col">
-					<label for="inviteCode">Invite Code:</label>
-					<input type="text" class="form-control" name="group_id">
-				</div>
+                        <div>
+                            <label for="inviteCode">Invite Code:</label><br>
+                            <input type="text" id="group_id" name="group_id" disabled>
+                        </div>                        
+                        <br>
+                        <p>Send this code to your group</p>
+                        
+                        <button type="submit">Continue</button>
 
-			</div>
+                    </form>
 
-			<div class="row">
-				<button type="submit" class="btn btn-primary">Continue</button>
-			</div>
+                    <br>
+                    <button onclick="copyText()">Copy Code</button><br>
 
-		</form>
-	</div>
+
+                    <div class="snackbar" id="snackbar">Copied invite code to clipboard</div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            Page Designed By: Cody Hatch
+        </footer>
+    </div>
 </body>
 
 </html>

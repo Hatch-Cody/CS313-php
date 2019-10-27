@@ -68,7 +68,7 @@
             <div class="flexContainer">
                 <div class="infoBox" id="infoBox">
 
-                    <form action="insert.php" method="post">
+                    <form action="" method="post">
                         <p>Here is your invite code:</p>
                         <input type="text" id="group_id" name="group_id" disabled>
                         <br>

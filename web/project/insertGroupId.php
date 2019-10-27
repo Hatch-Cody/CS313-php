@@ -1,6 +1,6 @@
 <?php
 // get the data from the POST
-$group_id = $_GET['group_id'];
+$group_id = $_POST['group_id'];
 $num_one = "Arbys";
 $num_two = "Panda";
 $num_three = "Cafe Rio";
@@ -10,7 +10,7 @@ require("dbConnect.php");
 $db = get_db();
 
 try {
-    $query = 'INSERT INTO group(num_one, num_two, num_three) VALUES("Arbys", "Panda", "Cafe Rio)';
+    $query = 'INSERT INTO "group" (num_one, num_two, num_three) VALUES("Arbys", "Panda", "Cafe Rio")';
     $statement = $db->prepare($query);
     //$statement->bindValue(':group_id', $group_id);
     //$statement->bindValue(':num_one', $num_one);

@@ -1,14 +1,21 @@
 <?php
 // get the data from the POST
 $group_id = $_GET['group_id'];
+$num_one = 'Arbys';
+$num_two = 'Panda';
+$num_three = 'Cafe Rio';
 
-	require("dbConnect.php");
-    $db = get_db();
-    
+
+require("dbConnect.php");
+$db = get_db();
+
 try {
-    $query = 'INSERT INTO group(group_id) VALUES(:group_id)';
+    $query = 'INSERT INTO group(group_id, num_one, num_two, num_three) VALUES(:group_id, :num_one, :num_two, :num_three)';
     $statement = $db->prepare($query);
     $statement->bindValue(':group_id', $group_id);
+    $statement->bindValue(':num_one', $num_one);
+    $statement->bindValue(':num_two', $num_two);
+    $statement->bindValue(':num_three', $num_three);
     $statement->execute();
 
     // Now we bind the values to the placeholders. This does some nice things
@@ -16,7 +23,7 @@ try {
 } catch (Exception $ex) {
     // Please be aware that you don't want to output the Exception message in
     // a production environment
-    echo "Error with DB. Details: $ex";
+    echo "Error with DB. Details: <br> $ex";
     die();
 }
 

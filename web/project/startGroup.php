@@ -71,12 +71,13 @@
                         
                         <br>
                         <p>Send this code to your group</p>
-
-                        <button onclick="copyText()">Copy Code</button><br>
-                        <!-- <button onclick="nav()">Continue</button> -->
+                        
                         <button type="submit">Continue</button>
 
                     </form>
+
+                    <br>
+                    <button onclick="copyText()">Copy Code</button><br>
 
 
                     <div class="snackbar" id="snackbar">Copied invite code to clipboard</div>

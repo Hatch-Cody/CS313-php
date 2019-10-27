@@ -60,7 +60,7 @@
             <div class="flexContainer">
                 <div class="infoBox" id="infoBox">
 
-                    <form action="insertGroupId.php" method="POST">
+                    <form action="insertGroupId.php" method="GET">
 
                         <div>
                             <label for="inviteCode">Invite Code:</label><br>

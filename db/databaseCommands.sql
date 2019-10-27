@@ -1,3 +1,6 @@
+DROP TABLE "group_member";
+DROP TABLE "group";
+
 CREATE TABLE "group_member" (
     "member_id"      serial PRIMARY KEY, 
     "num_one"        varchar, 
@@ -14,11 +17,11 @@ CREATE TABLE "group" (
     "choice_three" varchar,
     "timestamp"    timestamp);
 
-ALTER TABLE "groupMember" ADD FOREIGN KEY ("group_id") REFERENCES "group" ("group_id");
+ALTER TABLE "group_member" ADD FOREIGN KEY ("group_id") REFERENCES "group" ("group_id");
 
 
 
-INSERT INTO "group" (group_id, choice_one, choice_two, choice_three) VALUES ('123456', 'choiceOne', 'choiceTwo', 'choiceThree');
+INSERT INTO "group" (group_id, choice_one, choice_two, choice_three) VALUES ('1a2v3f', 'choiceOne', 'choiceTwo', 'choiceThree');
 
 INSERT INTO "group_member" (num_one, num_two, num_three, least_favorite, username, group_id) VALUES ('McDonalds', 'Little Cesars', 'Jimmy Johns', 'Wendys', 'James', '123456');
 INSERT INTO "group_member" (num_one, num_two, num_three, least_favorite, username, group_id) VALUES ('Dominos', 'Five Guys', 'Arbys', 'Subway', 'Greg', '123456');

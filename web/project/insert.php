@@ -1,6 +1,11 @@
 <?php
 // get the data from the POST
-$group_id = $_POST['group_id'];
+$group_id       = $_POST['group_id'];
+$username       = $_POST['name'];
+$num_one        = $_POST['num_one'];
+$num_two        = $_POST['num_two'];
+$num_three      = $_POST['num_three'];
+$least_favorite = $_POST['least_favorite'];
 
 date_default_timezone_set("America/Denver");
 $time = date("h:i:sa");
@@ -10,9 +15,18 @@ $db = get_db();
 
 try
 {
-   $query = 'INSERT INTO group(group_id) VALUES(:group_id)';
+   $query = 'UPDATE group
+   SET (num_one, num_two, num_three, least_favorite, username, group_id, date) = (:num_one :num_two :num_three :least_favorite :username :group_id :date) 
+   WHERE group_id = "$group_id"';
+
    $statement = $db->prepare($query);
+   $statement->bindValue(':num_one', $num_one);
+   $statement->bindValue(':num_two', $num_two);
+   $statement->bindValue(':num_three', $num_three);
+   $statement->bindValue(':least_favorite', $least_favorite);
+   $statement->bindValue(':username', $username);
    $statement->bindValue(':group_id', $group_id);
+   $statement->bindValue(':date', '\'now()\'');
    $statement->execute();
 
 	// Now we bind the values to the placeholders. This does some nice things
@@ -27,7 +41,7 @@ catch (Exception $ex)
 }
 
 // finally, redirect them to a new page to actually show the topics
-header("Location: choicesForm.php?group_idId=$group_id");
+header("Location: choiceResult.php");
 
 die(); // we always include a die after redirects. In this case, there would be no
        // harm if the user got the rest of the page, because there is nothing else

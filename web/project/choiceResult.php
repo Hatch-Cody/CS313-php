@@ -31,6 +31,8 @@ $group_id = $_POST['group_id'];
 
 
                     <?php
+                    echo '<p>group_id == '.$group_id.'</p>';
+
                     $statement = $db->query('SELECT 
                     username, 
                     num_one, 
@@ -43,9 +45,7 @@ $group_id = $_POST['group_id'];
                     $statement->bindValue(':group_id', $group_id);
 
                     echo '<h1>Group Choices</h1>';
-
-                    echo '<p>group_id == '.$group_id.'</p>';
-
+                    
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
                         $row['num_one'];

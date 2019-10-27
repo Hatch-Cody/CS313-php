@@ -65,7 +65,7 @@ $db = get_db();
             <div class="flexContainer">
                 <div class="infoBox" id="infoBox">
 
-                    <form action="insert.php" method="POST">
+                    <form action="" method="POST">
 
                         <p>Here is your invite code:</p>
 
@@ -73,7 +73,7 @@ $db = get_db();
                             <label for="inviteCode">Title</label>
                             <input type="text" id="group_id" name="group_id" disabled>
                         </div>
-                        
+
                         <br>
                         <p>Send this code to your group</p>
 

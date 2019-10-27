@@ -6,7 +6,7 @@ include_once 'includes/dbh.php';
 <html lang="en">
 
 <head>
-    <title>Group Choice</title>
+    <title>Night Saver</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,8 +53,7 @@ include_once 'includes/dbh.php';
                     num_two, 
                     num_three, 
                     least_favorite 
-                    FROM group_member
-                    WHERE');
+                    FROM group_member');
 
                     echo '<h1>Group Choices</h1>';
 

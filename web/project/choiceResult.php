@@ -19,9 +19,9 @@ $group_id = $_POST['group_id'];
 
 <body>
     <!-- Nav Bar -->
-	<div class="topnav">
-		<a class="active" href="projectHome.html">Home</a>
-	</div>
+    <div class="topnav">
+        <a class="active" href="projectHome.html">Home</a>
+    </div>
 
     <div class="page">
         <div class="main">
@@ -38,7 +38,9 @@ $group_id = $_POST['group_id'];
                     num_three, 
                     least_favorite 
                     FROM group_member
-                    WHERE group_id = $group_id');
+                    WHERE group_id = :group_id');
+
+                    $statement->bindValue(':group_id', $group_id);
 
                     echo '<h1>Group Choices</h1>';
 
@@ -54,8 +56,7 @@ $group_id = $_POST['group_id'];
 
                         echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
-                            $index += 1;
-                            
+                        $index += 1;
                     }
                     ?>
 

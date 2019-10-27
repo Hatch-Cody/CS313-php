@@ -28,7 +28,7 @@ catch (PDOException $ex)
 
 try
 {
-   $query = 'INSERT INTO group(group_id) VALUES(:group_id)';
+   $query = "INSERT INTO group(group_id) VALUES(:group_id)";
    $statement = $db->prepare($query);
    $statement->bindValue(':group_id', $group_id);
    $statement->execute();

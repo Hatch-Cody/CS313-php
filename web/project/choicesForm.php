@@ -118,10 +118,10 @@
 
 					?>
 					<input type="text" name="name"  placeholder="Name"><br>
-					<input type="text" name="one"   placeholder="First Choice"><br>
-					<input type="text" name="two"   placeholder="Second Choice"><br>
-					<input type="text" name="three" placeholder="Third Choice"><br>
-					<input type="text" name="least" placeholder="Least Favorite">
+					<input type="text" name="num_one"   placeholder="First Choice"><br>
+					<input type="text" name="num_two"   placeholder="Second Choice"><br>
+					<input type="text" name="num_three" placeholder="Third Choice"><br>
+					<input type="text" name="least_favorite" placeholder="Least Favorite">
 					<br>
 					<input type="submit" onclick="submitChoices()" value="Submit">
 				</form>

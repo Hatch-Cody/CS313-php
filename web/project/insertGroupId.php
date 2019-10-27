@@ -10,12 +10,12 @@ require("dbConnect.php");
 $db = get_db();
 
 try {
-    $query = 'INSERT INTO group(group_id, num_one, num_two, num_three) VALUES(:group_id, :num_one, :num_two, :num_three)';
+    $query = 'INSERT INTO group(group_id, num_one, num_two, num_three) VALUES(abc123, "Arbys", "Panda", "Cafe Rio)';
     $statement = $db->prepare($query);
-    $statement->bindValue(':group_id', $group_id);
-    $statement->bindValue(':num_one', $num_one);
-    $statement->bindValue(':num_two', $num_two);
-    $statement->bindValue(':num_three', $num_three);
+    //$statement->bindValue(':group_id', $group_id);
+    //$statement->bindValue(':num_one', $num_one);
+    //$statement->bindValue(':num_two', $num_two);
+    //$statement->bindValue(':num_three', $num_three);
     $statement->execute();
 
     // Now we bind the values to the placeholders. This does some nice things

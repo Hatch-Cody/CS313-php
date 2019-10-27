@@ -17,7 +17,7 @@ $group_id = $_GET['group_id'];
 <body>
     <!-- Nav Bar -->
     <div class="topnav">
-        <a class="active" href="projectHome.html">Home</a>
+        <a href="projectHome.html">Home</a>
     </div>
 
     <div class="page">

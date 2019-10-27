@@ -1,7 +1,3 @@
-<?php
-require("databaseConnect.php");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 

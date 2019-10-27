@@ -73,7 +73,7 @@ $db = get_db();
 
                         <button onclick="copyText()">Copy Code</button><br>
                         <!-- <button onclick="nav()">Continue</button> -->
-                        <input type="submit" value="Continue">
+                        <button type="submit" value="Continue"></button>
 
                     </form>
 

@@ -1,8 +1,3 @@
-<?php
-require("databaseConnect.php");
-$db = get_db();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +60,7 @@ $db = get_db();
             <div class="flexContainer">
                 <div class="infoBox" id="infoBox">
 
-                    <form action="" method="POST">
+                    <form action="insert.php" method="POST">
 
                         <p>Here is your invite code:</p>
 
@@ -73,7 +68,7 @@ $db = get_db();
                             <label for="inviteCode">Title</label>
                             <input type="text" id="group_id" name="group_id" disabled>
                         </div>
-
+                        
                         <br>
                         <p>Send this code to your group</p>
 

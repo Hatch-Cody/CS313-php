@@ -268,17 +268,17 @@ body {
 
 .infoBox > input[type="button"] {
 	color: #ffffff;
-	background-color:#522C44;
+	background-color:#1f2833;
 	font-size: 15px;
 	font-family: roboto;
 	padding: 15px;
 	border-radius: 12px;
-	border: 2px solid rgb(117, 56, 95);
+	border: 2px solid #45a29e;
 }
 
 .infoBox > input[type="button"]:hover {
 	color: #ffffff;
-	background-color: rgb(131, 90, 116);
+	background-color: #343e49;
 }
 
 .wideInfoBox {
@@ -310,18 +310,19 @@ body {
 
 button {
 	color: #ffffff;
-	background-color:#522C44;
+	background-color:#1f2833;
+	border-color: #45a29e;
 	font-size: 15px;
 	font-family: roboto;
 	padding: 10px;
 	margin: 10px;
 	border-radius: 12px;
-	border: 2px solid rgb(117, 56, 95);
+	border: 2px solid #45a29e;
 }
 
 button:hover {
 	color: #ffffff;
-	background-color: rgb(131, 90, 116);
+	background-color: #343e49;
 }
 
 .table {

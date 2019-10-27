@@ -62,13 +62,10 @@
 
                     <form action="insert.php" method="POST">
 
-                        <p>Here is your invite code:</p>
-
                         <div>
-                            <label for="inviteCode">Title</label>
+                            <label for="inviteCode">Invite Code:</label><br>
                             <input type="text" id="group_id" name="group_id" disabled>
-                        </div>
-                        
+                        </div>                        
                         <br>
                         <p>Send this code to your group</p>
                         

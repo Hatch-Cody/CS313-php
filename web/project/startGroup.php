@@ -74,7 +74,7 @@
 
                         <button onclick="copyText()">Copy Code</button><br>
                         <!-- <button onclick="nav()">Continue</button> -->
-                        <button type="submit" value="Continue"></button>
+                        <button type="submit">Continue</button>
 
                     </form>
 

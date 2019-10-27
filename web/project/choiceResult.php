@@ -1,8 +1,8 @@
 <?php
+$group_id = $_POST['group_id'];
+
 require("dbConnect.php");
 $db = get_db();
-
-$group_id = $_POST['group_id'];
 ?>
 
 <!DOCTYPE html>

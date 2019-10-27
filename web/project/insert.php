@@ -32,21 +32,3 @@ try {
 header("Location: choiceResult.php?group_id=$group_id");
 
 die();
-
-
-
-
-       
-   // $query = 'UPDATE group
-   // SET (num_one, num_two, num_three, least_favorite, username, group_id, date) = (:num_one :num_two :num_three :least_favorite :username :group_id :date) 
-   // WHERE group_id = "$group_id"';
-
-   // $statement = $db->prepare($query);
-   // $statement->bindValue(':num_one', $num_one);
-   // $statement->bindValue(':num_two', $num_two);
-   // $statement->bindValue(':num_three', $num_three);
-   // $statement->bindValue(':least_favorite', $least_favorite);
-   // $statement->bindValue(':username', $username);
-   // $statement->bindValue(':group_id', $group_id);
-   // $statement->bindValue(':date', '\'now()\'');
-   // $statement->execute();

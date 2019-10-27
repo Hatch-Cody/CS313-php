@@ -2,10 +2,6 @@
 include_once 'includes/dbh.php';
 ?>
 
-<?php
-$group_id = $_GET['group_id'];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +16,9 @@ $group_id = $_GET['group_id'];
 
 <body>
     <!-- Nav Bar -->
-    <div class="topnav">
-        <a class="active" href="projectHome.html">Home</a>
-    </div>
+	<div class="topnav">
+		<a class="active" href="projectHome.html">Home</a>
+	</div>
 
     <div class="page">
         <div class="main">
@@ -74,7 +70,8 @@ $group_id = $_GET['group_id'];
 
                         echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
-                        $index += 1;
+                            $index += 1;
+                            
                     }
                     ?>
 

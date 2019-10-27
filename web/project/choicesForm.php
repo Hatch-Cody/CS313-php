@@ -123,7 +123,7 @@
 					<input type="text" name="three" placeholder="Third Choice"><br>
 					<input type="text" name="least" placeholder="Least Favorite">
 					<br>
-					<input type="button" onclick="submitChoices()" value="Submit">
+					<input type="submit" onclick="submitChoices()" value="Submit">
 				</form>
 
 

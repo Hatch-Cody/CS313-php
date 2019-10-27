@@ -10,7 +10,7 @@ require("dbConnect.php");
 $db = get_db();
 
 try {
-    $query = 'INSERT INTO "group" (choice_one, choice_two, choice_three) VALUES("Arbys", "Panda", "Cafe Rio")';
+    $query = 'INSERT INTO "group" (choice_one, choice_two, choice_three) VALUES(Arbys, Panda, Cafe Rio)';
     $statement = $db->prepare($query);
     //$statement->bindValue(':group_id', $group_id);
     //$statement->bindValue(':num_one', $num_one);

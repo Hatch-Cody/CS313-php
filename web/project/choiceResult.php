@@ -44,9 +44,6 @@ $group_id = $_POST['group_id'];
 
                     echo '<h1>Group Choices</h1>';
 
-                    $index = 0;
-                    //$choices = array([][]);
-
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
                         $row['num_one'];
@@ -56,7 +53,6 @@ $group_id = $_POST['group_id'];
 
                         echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
-                        $index += 1;
                     }
                     ?>
 

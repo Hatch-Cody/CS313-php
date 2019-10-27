@@ -1,3 +1,8 @@
+<?php
+require("dbConnect.php");
+$db = get_db();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,17 +26,20 @@
 			// show snackbar alert that the choices have been sent
 			var x = document.getElementById("snackbar");
 			x.className = "show";
-			
-			setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
+
+			setTimeout(function() {
+				x.className = x.className.replace("show", "");
+			}, 3000);
 
 			nav();
 		}
 
 		function nav() {
 			// wait two seconde then navigate to new page
-			setTimeout(function () { window.location.assign("choiceResult.php"); }, 3000);
+			setTimeout(function() {
+				window.location.assign("choiceResult.php");
+			}, 3000);
 		}
-
 	</script>
 
 	<style>
@@ -58,24 +66,51 @@
 		}
 
 		@-webkit-keyframes fadein {
-			from { bottom: 0; opacity: 0; }
-			to { bottom: 30px; opacity: 1; }
+			from {
+				bottom: 0;
+				opacity: 0;
+			}
+
+			to {
+				bottom: 30px;
+				opacity: 1;
+			}
 		}
 
 		@keyframes fadein {
-			from { bottom: 0; opacity: 0; 
-			to { bottom: 30px; opacity: 1; }
-		}
+			from {
+				bottom: 0;
+				opacity: 0;
 
-		@-webkit-keyframes fadeout {
-			from { bottom: 30px; opacity: 1; }
-			to { bottom: 0; opacity: 0; }
-		}
+				to {
+					bottom: 30px;
+					opacity: 1;
+				}
+			}
 
-		@keyframes fadeout {
-			from { bottom: 30px; opacity: 1; }
-			to { bottom: 0; opacity: 0 }
-		}
+			@-webkit-keyframes fadeout {
+				from {
+					bottom: 30px;
+					opacity: 1;
+				}
+
+				to {
+					bottom: 0;
+					opacity: 0;
+				}
+			}
+
+			@keyframes fadeout {
+				from {
+					bottom: 30px;
+					opacity: 1;
+				}
+
+				to {
+					bottom: 0;
+					opacity: 0
+				}
+			}
 	</style>
 
 </head>
@@ -87,6 +122,10 @@
 	</div>
 
 	<div class="page">
+
+		<?php
+			$courseId = $_GET['group_id'];
+		?>
 
 		<div class="main">
 			<h1 style="text-align: center;">Group Choice</h1>

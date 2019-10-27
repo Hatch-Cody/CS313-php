@@ -36,7 +36,7 @@ $group_id = $_GET['group_id'];
                     $statement->bindValue(':group_id', $group_id);
                     $statement->execute();
 
-                    echo '<h1>Group Results</h1>';
+                    echo '<h1>Results</h1>';
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 

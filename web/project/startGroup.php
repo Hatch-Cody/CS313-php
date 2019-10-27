@@ -1,3 +1,8 @@
+<?php
+	require("databaseConnect.php");
+	$db = get_db();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +14,9 @@
     <link rel="stylesheet" href="project.css">
 
     <script>
-
         function copyText() {
             /* Get the text field */
-            var copyText = document.getElementById("inviteCode");
+            var copyText = document.getElementById("group_id");
 
             /* Select the text field */
             copyText.select();
@@ -24,12 +28,16 @@
             // show snackbar alert that the code was copied
             var x = document.getElementById("snackbar");
             x.className = "show";
-            setTimeout(function () { x.className = x.className.replace("show", ""); }, 2000);
+            setTimeout(function() {
+                x.className = x.className.replace("show", "");
+            }, 2000);
         }
 
         function nav() {
             // wait two seconde then navigate to new page
-            setTimeout(function () { window.location.assign("choicesForm.php"); }, 1000);
+            setTimeout(function() {
+                window.location.assign("choicesForm.php");
+            }, 1000);
         }
 
         function generateCode() {
@@ -40,11 +48,10 @@
                 ans +=
                     arr[Math.floor(Math.random() * arr.length)];
             }
-            document.getElementById("inviteCode").value = ans;
+            document.getElementById("group_id").value = ans;
 
             return ans;
         }
-
     </script>
 
 </head>
@@ -60,13 +67,19 @@
             <h1 style="text-align: center;">Group Choice</h1>
             <div class="flexContainer">
                 <div class="infoBox" id="infoBox">
-                    <p>Here is your invite code:</p>
-                    <input type="text" id="inviteCode" name="inviteCode" disabled>
-                    <br>
-                    <p>Send this code to your group</p>
 
-                    <button onclick="copyText()">Copy Code</button><br>
-                    <button onclick="nav()">Continue</button>
+                    <form action="insert.php" method="post">
+                        <p>Here is your invite code:</p>
+                        <input type="text" id="group_id" name="group_id" disabled>
+                        <br>
+                        <p>Send this code to your group</p>
+
+                        <button onclick="copyText()">Copy Code</button><br>
+                        <!-- <button onclick="nav()">Continue</button> -->
+                        <input type="submit" value="Continue">
+
+                    </form>
+
 
                     <div class="snackbar" id="snackbar">Copied invite code to clipboard</div>
 

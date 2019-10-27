@@ -1,6 +1,8 @@
 <?php
 require("dbConnect.php");
 $db = get_db();
+
+$group_id = $_POST['group_id'];
 ?>
 
 <!DOCTYPE html>
@@ -29,8 +31,6 @@ $db = get_db();
 
 
                     <?php
-                    
-
                     $statement = $db->query('SELECT 
                     username, 
                     num_one, 

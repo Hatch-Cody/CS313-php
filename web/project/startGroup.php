@@ -136,12 +136,11 @@
                             <input type="text" id="group_id" name="group_id"><br>
                             <button onclick="copyText()">Copy Code</button><br>
                         </div>
-                        <br>
-                        <p>Send this code to your group</p>
 
+                        <p>Send this code to your group</p>
                         <button type="submit">Continue</button><br>
                     </form>
-                    
+
                     <div class="snackbar" id="snackbar">Copied invite code to clipboard</div>
 
                 </div>

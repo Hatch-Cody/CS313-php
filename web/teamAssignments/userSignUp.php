@@ -20,12 +20,6 @@
                 <br>
 
                 <input type="submit" value="submit">
-
-
-
-
-                <!-- <button onclick="location.href='register.php'">Register me!</button> -->
-
             </form>
         </div>
 

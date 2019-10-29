@@ -9,6 +9,8 @@ $db = get_db();
 $username = $_POST['username'];
 $password = $_POST['password'];
 $hashedPassword =  password_hash($password, PASSWORD_DEFAULT);
+echo "Password: $password, username: $username, Hashed: $hashedPassword";
+/*
 
 try
 {
@@ -25,5 +27,5 @@ catch (Exception $ex)
 }
 
 header('Location: loginPage.php');
-
+/*
 ?>

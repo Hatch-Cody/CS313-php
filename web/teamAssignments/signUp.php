@@ -12,7 +12,7 @@ $hashedPassword =  password_hash($password, PASSWORD_DEFAULT);
 
 try
 {
-   $query = 'INSERT INTO "user" (username, password) VALUES(:username, :hashedPassword)';
+   $query = 'INSERT INTO "user1" (username, password) VALUES(:username, :hashedPassword)';
    $statement = $db->prepare($query);
    $statement->bindValue(':username', $username);
    $statement->bindValue(':hashedPassword', $hashedPassword);

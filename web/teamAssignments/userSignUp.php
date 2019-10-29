@@ -12,19 +12,21 @@
 
 <body>
     <div class="body">
-        <form action="signUp.php" method="POST">      
-            <input type="text" placeholder="username"><br>
-            <input type="password" placeholder="password"><br>
-            <br>
+        <div class="loginBox">
+            <form action="signUp.php" method="POST">
+                <input type="text" placeholder="username"><br>
+                <input type="password" placeholder="password"><br>
+                <br>
 
-            <input type="submit" value="submit">
-            
+                <input type="submit" value="submit">
 
 
-            
-            <!-- <button onclick="location.href='register.php'">Register me!</button> -->
 
-        </form>
+
+                <!-- <button onclick="location.href='register.php'">Register me!</button> -->
+
+            </form>
+        </div>
 
     </div>
 

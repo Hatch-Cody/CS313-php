@@ -21,7 +21,7 @@ echo "HASH: $hashedPassword";
 
 if (password_verify($password, $hashedPassword))
 {
-     header('Location: welcomeUser.php');
+     header("Location: welcomeUser.php&username=$username");
 }
 }catch (Exception $ex) {
     echo "Error with DB. Details: $ex";

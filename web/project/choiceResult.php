@@ -29,8 +29,8 @@ $group_id = $_GET['group_id'];
 
                     <?php
 
-                    $choices = new \Ds\Vector();
-                    $leastFavorite = new \Ds\Vector();
+                    //$choices = new \Ds\Vector();
+                    //$leastFavorite = new \Ds\Vector();
 
                     require("dbConnect.php");
                     $db = get_db();
@@ -44,11 +44,11 @@ $group_id = $_GET['group_id'];
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
-                        $choices->push('num_one');
-                        $choices->push('num_two');
-                        $choices->push('num_three');
+                        //$choices->push('num_one');
+                        //$choices->push('num_two');
+                        //$choices->push('num_three');
 
-                        $leastFavorite->push('least_favorite');
+                        //$leastFavorite->push('least_favorite');
 
                         print_r($choices);
                         print_r($leastFavorite);

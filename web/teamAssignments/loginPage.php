@@ -18,12 +18,12 @@
 			
 			<form action="signIn.php" method="POST">
 				<p>username:</p>
-				<input type="text"     name="" placeholder="Enter Username">
+				<input type="text"     name="username" placeholder="Enter Username">
 				
 				<p>password:</p>
-				<input type="password" name="" placeholder="Enter Password">
+				<input type="password" name="password" placeholder="Enter Password">
 				
-				<input type="submit"   name="" value="Login">
+				<input type="submit" value="Login">
 				
 				<a href="#" >Forgot your password?</a> <br>
 				<a href="userSignUp.php" >Dont have an account?</a> 

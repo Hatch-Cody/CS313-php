@@ -109,7 +109,7 @@
 			<div class="flexContainer">
 				<form class="infoBox" action="insert.php" method="POST">
 					<?php
-					echo '<input type="text" name="group_id" value="' . $group_id . '"><br>'
+					echo '<input type="hidden" name="group_id" value="' . $group_id . '"><br>'
 					?>
 					<input type="text" name="username" placeholder="Name"><br>
 					<input type="text" name="num_one" placeholder="First Choice"><br>

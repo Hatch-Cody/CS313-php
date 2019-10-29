@@ -13,7 +13,7 @@
 <body>
     <div class="body">
         <div class="loginBox">
-            <h1> Login Here </h1>
+            <h1> Register </h1>
             <form action="signUp.php" method="POST">
                 <input type="text" placeholder="username"><br>
                 <input type="password" placeholder="password"><br>

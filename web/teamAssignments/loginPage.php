@@ -11,9 +11,7 @@
 	
 	<body class="body">
 		<div class="loginBox">
-			
-			<img src="assets/avatar.png" class="avatar">
-			
+            
 			<h1> Login Here </h1>
 			
 			<form action="signIn.php" method="POST">

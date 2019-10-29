@@ -13,7 +13,11 @@ $statement->execute();
 
 $hashedPassword = $statement->fetch(PDO::FETCH_ASSOC);
 
-password_verify($password, $hashedPassword);
+if (password_verify($password, $hashedPassword))
+{
+    header('Location: welcomeUser.php');
+}
+
 
 
 ?>

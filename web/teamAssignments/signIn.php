@@ -16,8 +16,7 @@ $statement->bindValue(':username', $username);
 $statement->execute();
 
 $row = $statement->fetch(PDO::FETCH_ASSOC);
-$row['password'];
-$hashedPassword = $row[0];
+$hashedPassword = $row['password'];
 echo "HASH: $hashedPassword";
 
 // if (password_verify($password, $hashedPassword))

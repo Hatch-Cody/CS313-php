@@ -16,7 +16,7 @@
 			
 			<h1> Login Here </h1>
 			
-			<input action="signIn.php" method="POST">
+			<form action="signIn.php" method="POST">
 				<p>username:</p>
 				<input type="text"     name="" placeholder="Enter Username">
 				
@@ -27,6 +27,7 @@
 				
 				<a href="#" >Forgot your password?</a> <br>
 				<a href="userSignUp.php" >Dont have an account?</a> 
+			</form>
 			
 		</div>
 	</body>

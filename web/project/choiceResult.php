@@ -28,6 +28,8 @@ $group_id = $_GET['group_id'];
 
 
                     <?php
+
+                    //$choices = new SplDoublyLinkedList();
                     require("dbConnect.php");
                     $db = get_db();
 
@@ -40,17 +42,10 @@ $group_id = $_GET['group_id'];
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
-                        $row['num_one'];
-                        $row['num_two'];
-                        $row['num_three'];
-                        $row['least_favorite'];
-
                         echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
                              $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
                     }
                     ?>
-
-
 
                 </div>
             </div>

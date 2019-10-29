@@ -6,6 +6,7 @@ $db = get_db();
 $username = $_POST['username'];
 $password = $_POST['password'];
 
+try {
 $query = 'SELECT password FROM "user1" WHERE username = :username';
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
@@ -17,7 +18,10 @@ if (password_verify($password, $hashedPassword))
 {
     header('Location: welcomeUser.php');
 }
-
+}catch (Exception $ex) {
+    echo "Error with DB. Details: $ex";
+	die();
+}
 
 
 ?>

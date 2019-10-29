@@ -19,14 +19,11 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
 $hashedPassword = $row['password'];
 echo "HASH: $hashedPassword";
 
-// if (password_verify($password, $hashedPassword))
-// {
-//     header('Location: welcomeUser.php');
-// }
+if (password_verify($password, $hashedPassword))
+{
+     header('Location: welcomeUser.php');
+}
 }catch (Exception $ex) {
     echo "Error with DB. Details: $ex";
 	die();
 }
-
-
-?>

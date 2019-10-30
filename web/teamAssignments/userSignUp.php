@@ -6,7 +6,32 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="loginStyle.css">
 
-    <title></title>
+    <title>Create an Account</title>
+
+    <script>
+        function validate() {
+
+            var pass = document.getElementById('password').value;
+            var check = document.getElementById('passwordMatch').value;
+
+            var same = false;
+
+            if (pass == check) {
+                document.getElementById('password').style.borderColor = 'green';
+                document.getElementById('passwordMatch').style.borderColor = 'green';
+                same = true;
+            } else {
+                document.getElementById('password').style.borderColor = 'red';
+                document.getElementById('passwordMatch').style.borderColor = 'red';
+                same = false;
+            }
+
+            if (pass.length > 7 && same) {
+                document.getElementById('submitbutton').disabled = enabled;
+            }
+        }
+        
+    </script>
 
 </head>
 
@@ -15,11 +40,12 @@
         <div class="loginBox">
             <h1>Register</h1>
             <form action="signUp.php" method="POST">
-                <input type="text" name= "username" placeholder="username"><br>
-                <input type="password" name="password" placeholder="password"><br>
+                <input type="text" name="username" placeholder="username"><br>
+                <input type="password" onkeyup="validate()" id="password" name="password" placeholder="password"><br>
+                <input type="password" onkeyup="validate()" id="passwordMatch" name="passwordMatch" placeholder="password"><br>
                 <br>
 
-                <input type="submit" value="submit">
+                <input type="submit" id="submitButton" value="submit" disabled>
             </form>
         </div>
 

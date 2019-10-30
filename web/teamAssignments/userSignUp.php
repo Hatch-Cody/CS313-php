@@ -25,7 +25,6 @@
                 document.getElementById('passwordMatch').style.borderColor = 'red';
                 document.getElementById('submitbutton').disabled = true;
             }
-
         }
 
     </script>
@@ -42,7 +41,7 @@
                 <input type="password" onkeyup="validate()" id="passwordMatch" name="passwordMatch" placeholder="password"><br>
                 <br>
 
-                <input type="submit" id="submitButton" value="submit" disabled>
+                <input type="submit" id="submitButton" value="submit">
             </form>
         </div>
 

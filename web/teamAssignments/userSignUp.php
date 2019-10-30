@@ -16,19 +16,16 @@
 
             var same = false;
 
-            if (pass == check) {
+            if (pass == check && pass.length > 7) {
                 document.getElementById('password').style.borderColor = 'green';
                 document.getElementById('passwordMatch').style.borderColor = 'green';
-                same = true;
+                document.getElementById('submitbutton') = enabled;
             } else {
                 document.getElementById('password').style.borderColor = 'red';
                 document.getElementById('passwordMatch').style.borderColor = 'red';
-                same = false;
+                document.getElementById('submitbutton') = disabled;
             }
 
-            if (pass.length > 7 && same) {
-                document.getElementById('submitbutton').disabled = enabled;
-            }
         }
 
     </script>

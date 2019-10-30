@@ -11,7 +11,7 @@
 	
 	<body class="body">
 		<div class="loginBox">
-            
+
 			<h1> Login Here </h1>
 			
 			<form action="signIn.php" method="POST">
@@ -23,7 +23,6 @@
 				
 				<input type="submit" value="Login">
 				
-				<a href="#" >Forgot your password?</a> <br>
 				<a href="userSignUp.php" >Dont have an account?</a> 
 			</form>
 			

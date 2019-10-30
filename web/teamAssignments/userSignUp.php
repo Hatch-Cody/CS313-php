@@ -19,11 +19,11 @@
             if (pass == check && pass.length > 7) {
                 document.getElementById('password').style.borderColor = 'green';
                 document.getElementById('passwordMatch').style.borderColor = 'green';
-                document.getElementById('submitbutton') = enabled;
+                document.getElementById('submitbutton').disabled = false;
             } else {
                 document.getElementById('password').style.borderColor = 'red';
                 document.getElementById('passwordMatch').style.borderColor = 'red';
-                document.getElementById('submitbutton') = disabled;
+                document.getElementById('submitbutton').disabled = true;
             }
 
         }

@@ -62,7 +62,7 @@ $group_id = $_GET['group_id'];
                         print_r($choices);
                         print_r($leastFavorite);
 
-                        echo $row['username'] . ' | ' . $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
+                        echo $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
                              $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
                     }
                     ?>

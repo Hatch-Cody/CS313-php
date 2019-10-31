@@ -53,6 +53,8 @@ $group_id = $_GET['group_id'];
 
                         $least = strtolower($row['least_favorite']);
 
+                        // multidimensional array with the first value as the choice and 
+                        // the second value as the numer of time it has been chosen
                         for ($i = 0; i < sizeof($choices); $i++) {
 
                             if ($one != $choices[$i] && $choices[$i] == NULL) {
@@ -76,9 +78,6 @@ $group_id = $_GET['group_id'];
                                 $leastFavorite[$i] = $least;
                                 $choices[$i][0]+=1;
                             }
-
-                        print_r($choices);
-                        print_r($leastFavorite);
 
                         echo $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';

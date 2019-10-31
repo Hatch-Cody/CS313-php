@@ -57,24 +57,24 @@ $group_id = $_GET['group_id'];
 
                             if ($one != $choices[$i] && $choices[$i] == NULL) {
                                 $choices[$i] = $one;
-                                $choices[$i][0]++;
+                                $choices[$i][0]+=1;
                             }
 
                             if ($two != $choices[$i] && $choices[$i] == NULL) {
                                 $choices[$i] = $two;
-                                $choices[$i][0]++;
+                                $choices[$i][0]+=1;
                             }
 
                             if ($three != $choices[$i] && $choices[$i] == NULL) {
                                 $choices[$i] = $three;
-                                $$choices[$i][0]++;
+                                $$choices[$i][0]+=1;
                             }
                         }
 
                         for ($i = 0; i < sizeof($leastFavorite); $i++)
                             if ($least != $leastFavorite[$i] && $leastFavorite[$i] == NULL) {
                                 $leastFavorite[$i] = $least;
-                                $choices[$i][0]++;
+                                $choices[$i][0]+=1;
                             }
 
                         print_r($choices);
@@ -83,6 +83,29 @@ $group_id = $_GET['group_id'];
                         echo $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
                     }
+
+                    $numOne;
+                    $numTwo;
+                    $numThree;
+
+                    for ($i = 0; i < sizeof($choices); $i++) {
+                        $one = $choices[$i][0];
+                        $two = $choices[$i][0];
+                        $three = $choices[$i][0];
+
+                        if ($choices[$i][0] > $one)
+                            $numOne = $choices[$i];
+                        else if ($choices[$i][0] > $two)
+                            $numTwo = $choices[$i];
+                        else if ($choices[$i][0] > $three)
+                            $numThree = $choices[$i];
+                    }
+
+                    echo 'Results: ' . $numOne . ' | ' . $numTwo . ' | ' . $numThree . '<br>';
+
+
+
+
                     ?>
 
                 </div>

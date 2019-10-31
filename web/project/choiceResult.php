@@ -32,8 +32,8 @@ $group_id = $_GET['group_id'];
                     //$choices = new \Ds\Vector();
                     //$leastFavorite = new \Ds\Vector();
 
-                    $choices = array();
-                    $leastFavorite = array();
+                   // $choices = array();
+                   // $leastFavorite = array();
 
                     require("dbConnect.php");
                     $db = get_db();

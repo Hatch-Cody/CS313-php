@@ -32,8 +32,8 @@ $group_id = $_GET['group_id'];
                     //$choices = new \Ds\Vector();
                     //$leastFavorite = new \Ds\Vector();
 
-                   // $choices = array();
-                   // $leastFavorite = array();
+                    $choices = array();
+                    $leastFavorite = array();
 
                     require("dbConnect.php");
                     $db = get_db();
@@ -53,17 +53,27 @@ $group_id = $_GET['group_id'];
 
                         $least = strtolower($row['least_favorite']);
 
-                        //$choices->push($one);
-                        //$choices->push($two);
-                        //$choices->push($three);
+                        for ($i = 0; i < sizeof($choices); $i++) {
 
-                        //$leastFavorite->push(least_favorite');
+                            if ($one != $choices[$i] && $choices[$i] == NULL)
+                                $choices->push($one);
+
+                            if ($two != $choices[$i] && $choices[$i] == NULL)
+                                $choices->push($two);
+
+                            if ($three != $choices[$i] && $choices[$i] == NULL)
+                                $choices->push($three);
+                        }
+
+                        for ($i = 0; i < sizeof($leastFavorite); $i++)
+                            if ($least != $leastFavorite[$i] && $leastFavorite[$i] == NULL)
+                                $leastFavorite->push($least);
 
                         print_r($choices);
                         print_r($leastFavorite);
 
                         echo $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
-                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
+                            $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
                     }
                     ?>
 

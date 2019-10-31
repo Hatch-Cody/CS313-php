@@ -55,19 +55,27 @@ $group_id = $_GET['group_id'];
 
                         for ($i = 0; i < sizeof($choices); $i++) {
 
-                            if ($one != $choices[$i] && $choices[$i] == NULL)
-                                $choices->push($one);
+                            if ($one != $choices[$i] && $choices[$i] == NULL) {
+                                $choices[$i] = $one;
+                                $choices[$i][0]++;
+                            }
 
-                            if ($two != $choices[$i] && $choices[$i] == NULL)
-                                $choices->push($two);
+                            if ($two != $choices[$i] && $choices[$i] == NULL) {
+                                $choices[$i] = $two;
+                                $choices[$i][0]++;
+                            }
 
-                            if ($three != $choices[$i] && $choices[$i] == NULL)
-                                $choices->push($three);
+                            if ($three != $choices[$i] && $choices[$i] == NULL) {
+                                $choices[$i] = $three;
+                                $$choices[$i][0]++;
+                            }
                         }
 
                         for ($i = 0; i < sizeof($leastFavorite); $i++)
-                            if ($least != $leastFavorite[$i] && $leastFavorite[$i] == NULL)
-                                $leastFavorite->push($least);
+                            if ($least != $leastFavorite[$i] && $leastFavorite[$i] == NULL) {
+                                $leastFavorite[$i] = $least;
+                                $choices[$i][0]++;
+                            }
 
                         print_r($choices);
                         print_r($leastFavorite);

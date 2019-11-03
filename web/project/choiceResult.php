@@ -99,6 +99,8 @@ $group_id = $_GET['group_id'];
                         $two   = 0;
                         $three = 0;
 
+                        echo $choices[$i . '<br>'];
+
                         // get 1st, 2nd, and 3rd place choices
                         if      ($choices[$i][0] > $one) {
                             $choiceLeader = $choices[$i];

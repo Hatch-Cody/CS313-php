@@ -26,16 +26,7 @@ $group_id = $_GET['group_id'];
             <div class="flexContainer">
                 <div class="wideInfoBox">
 
-
                     <?php
-
-                    // debugging
-                    function console_log($data)
-                    {
-                        echo '<script>';
-                        echo 'console.log(' . json_encode($data) . ')';
-                        echo '</script>';
-                    }
 
                     $tempArray = array();
                     $tempLeast = array();
@@ -70,24 +61,9 @@ $group_id = $_GET['group_id'];
                         $three = preg_replace("/(^\s*)|(\s*$)/u", "", $three);
                         $least = preg_replace("/(^\s*)|(\s*$)/u", "", $least);
 
-                        // debugging
-                        console_log($one);
-                        console_log($two);
-                        console_log($three);
-                        console_log($least);
-
                         array_push($tempArray, $one, $two, $three);
                         array_push($tempLeast, $least);
-
-
-                        //echo $one . ' | ' . $two . ' | ' .
-                        //   $three . ' | ' . $least . '<br/>';
                     }
-
-                    // debugging
-                    console_log('after insertion into array:');
-                    console_log($tempArray);
-                    console_log($tempLeast);
 
                     // remove blank elements in the array
                     $tempArray = array_filter($tempArray);
@@ -97,31 +73,13 @@ $group_id = $_GET['group_id'];
                     $choices = array_count_values($tempArray);
                     $leastFavorite = array_count_values($tempLeast);
 
-                    // debugging
-                    console_log('after array_count_values:');
-                    console_log($choices);
-                    console_log($leastFavorite);
-
                     // sort the array by number that each restaurant was chosen
                     arsort($choices);
                     arsort($leastFavorite);
 
-                    // debugging
-                    console_log('after sorting:');
-                    console_log($choices);
-                    console_log($leastFavorite);
-
                     // get the keys for the arrays
                     $keys = array_keys($choices);
                     $keys2 = array_keys($leastFavorite);
-
-                    // debugging
-                    console_log('after keys:');
-                    console_log($keys);
-                    console_log($keys2);
-
-                    // debugging
-                    //print_r($choices);
 
                     echo '#1: ' . ucwords($keys[0]) . '<br>#2: ' . ucwords($keys[1]) . '<br>#3: ' . ucwords($keys[2]) . '<br><br><h2>Least Favorite</h2>' . ucwords($keys2[0]) . '<br>';
 

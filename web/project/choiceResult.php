@@ -64,8 +64,6 @@ $group_id = $_GET['group_id'];
 
                     $keys = array_keys($choices);
 
-                    echo '<br> <br>';
-
                     echo '<br>Results:<br>' . $keys[0] . ' | ' . $keys[1] . ' | ' . $keys[2] . '<br>';
 
                     ?>

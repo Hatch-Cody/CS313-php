@@ -54,8 +54,8 @@ $group_id = $_GET['group_id'];
                         array_push($tempArray, $one, $two, $three);
 
 
-                        echo $one . ' | ' . $two . ' | ' .
-                            $three . ' | ' . $least . '<br/>';
+                        //echo $one . ' | ' . $two . ' | ' .
+                         //   $three . ' | ' . $least . '<br/>';
                     }
 
                     $choices = array_count_values($tempArray);
@@ -65,41 +65,8 @@ $group_id = $_GET['group_id'];
                     $keys = array_keys($choices);
 
                     echo '<br> <br>';
-                    //print_r(max($choices));
-                    //echo '<br> max key ^ choices--<br>';
-                    //print_r($choices);
-
-                    // $choiceLeader = "";
-                    // $choiceSecond = "";
-                    // $choiceThird  = "";
-
-                    // // loop through all the choices
-                    // for ($i = 0; i < sizeof($choices); $i++) {
-
-                    //     // set temp values 
-                    //     $one   = 0;
-                    //     $two   = 0;
-                    //     $three = 0;
-
-                    //     echo $choices[$i] . '<br>';
-
-                    //     // get 1st, 2nd, and 3rd place choices
-                    //     if ($choices[$i][0] > $one) {
-                    //         $choiceLeader = $choices[$i];
-                    //         $one = $choices[$i][0];
-                    //     } else if ($choices[$i][0] > $two) {
-                    //         $numTwo = $choices[$i];
-                    //         $two = $choices[$i][0];
-                    //     } else if ($choices[$i][0] > $three) {
-                    //         $choiceThird = $choices[$i];
-                    //         $three = $choices[$i][0];
-                    //     }
-                    // }
 
                     echo '<br>Results:<br>' . $keys[0] . ' | ' . $keys[1] . ' | ' . $keys[2] . '<br>';
-
-
-
 
                     ?>
 

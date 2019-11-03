@@ -78,6 +78,11 @@ $group_id = $_GET['group_id'];
                         //   $three . ' | ' . $least . '<br/>';
                     }
 
+                    // debugging
+                    console_log($tempArray);
+                    console_log($tempLeast);
+
+                    // count duplicates and get rid of them, storing the count as a key=>value pair
                     $choices = array_count_values($tempArray);
                     $leastFavorite = array_count_values($tempLeast);
 

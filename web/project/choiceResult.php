@@ -58,12 +58,12 @@ $group_id = $_GET['group_id'];
                             $three . ' | ' . $least . '<br/>';
                     }
 
-                    $choices = array_count_values($tempArray);
+                    $choices = asort(array_count_values($tempArray));
 
                     echo '<br> <br>';
                     print_r(max($choices));
                     echo '<br> max key ^ choices--<br>';
-                    print_r(asort($choices));
+                    print_r($choices);
 
                     // $choiceLeader = "";
                     // $choiceSecond = "";

@@ -89,13 +89,13 @@ $group_id = $_GET['group_id'];
                     console_log($tempArray);
                     console_log($tempLeast);
 
+                    // remove blank elements in the array
+                    $tempArray = array_filter($tempArray);
+                    $tempLeast = array_filter($tempLeast);
+
                     // count duplicates and get rid of them, storing the count as a key=>value pair
                     $choices = array_count_values($tempArray);
                     $leastFavorite = array_count_values($tempLeast);
-
-                    // remove blank elements in the array
-                    $choices = array_filter($choices);
-                    $leastFavorite = array_filter($leastFavorite);
 
                     // debugging
                     console_log('after array_count_values:');

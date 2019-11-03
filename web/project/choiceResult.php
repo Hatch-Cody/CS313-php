@@ -62,6 +62,8 @@ $group_id = $_GET['group_id'];
 
                     arsort($choices);
 
+                    $keys = array_keys($choices);
+
                     echo '<br> <br>';
                     print_r(max($choices));
                     echo '<br> max key ^ choices--<br>';
@@ -94,7 +96,7 @@ $group_id = $_GET['group_id'];
                     //     }
                     // }
 
-                    echo '<br>Results: ' . key($choices[0]) . ' | ' . key($choices[1]) . ' | ' . key($choices[2]) . '<br>';
+                    echo '<br>Results: ' . $choices[$keys[0]] . ' | ' . $choices[$keys[1]] . ' | ' . $choices[$keys[2]] . '<br>';
 
 
 

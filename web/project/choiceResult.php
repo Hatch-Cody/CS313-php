@@ -50,11 +50,12 @@ $group_id = $_GET['group_id'];
 
                         $least = strtolower($row['least_favorite']);
 
-                        echo 'one == ' . $one . '<br>';
-
                         // multidimensional array with the first value as the choice and 
                         // the second value as the numer of times it has been chosen
                         for ($i = 0; i < sizeof($choices); $i++) {
+
+                            echo 'one == ' . $one . '<br>';
+                            echo '$choices[$i] == ' . $choices[$i] . '<br>';
 
                             // check if choice at row[num_one] is not in array ? add it to array[i] : increase count at array[i][0]  
                             if ($one != $choices[$i] && $choices[$i] == NULL) {

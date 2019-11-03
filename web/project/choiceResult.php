@@ -6,7 +6,7 @@ $group_id = $_GET['group_id'];
 <html lang="en">
 
 <head>
-    <title>Group Choice</title>
+    <title>We Choose Food</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@ $group_id = $_GET['group_id'];
 
     <div class="page">
         <div class="main">
-            <h1 style="text-align: center;">Group Choice</h1>
+            <h1 style="text-align: center;">We Choose Food</h1>
             <div class="flexContainer">
                 <div class="wideInfoBox">
 

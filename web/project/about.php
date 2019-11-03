@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Group Choice</title>
+    <title>We Choose Food</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +46,7 @@
                             place would be best or which places are a bad choice. It can get pretty chaotic, especially when you consider
                             they are all hangry.<br><br>
 
-                            Group Choice was made to solve this problem so that you and your friends or family can avoid the brawl and get
+                            We Choose Food was made to solve this problem so that you and your friends or family can avoid the brawl and get
                             on with your lives.<br><br>
 
                             This app was designed with simplicity in mind: All you have to do is make or join a group and input your top

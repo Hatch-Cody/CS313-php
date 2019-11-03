@@ -79,6 +79,7 @@ $group_id = $_GET['group_id'];
                     }
 
                     // debugging
+                    console_log('after insertion into array:');
                     console_log($tempArray);
                     console_log($tempLeast);
 
@@ -87,6 +88,7 @@ $group_id = $_GET['group_id'];
                     $leastFavorite = array_count_values($tempLeast);
 
                     // debugging
+                    console_log('after array_count_values:');
                     console_log($choices);
                     console_log($leastFavorite);
 
@@ -94,11 +96,17 @@ $group_id = $_GET['group_id'];
                     arsort($leastFavorite);
 
                     // debugging
+                    console_log('after sorting:');
                     console_log($choices);
                     console_log($leastFavorite);
 
                     $keys = array_keys($choices);
                     $keys2 = array_keys($leastFavorite);
+
+                    // debugging
+                    console_log('after keys:');
+                    console_log($keys);
+                    console_log($keys2);
 
                     // debugging
                     print_r($choices);

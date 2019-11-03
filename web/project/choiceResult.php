@@ -115,7 +115,7 @@ $group_id = $_GET['group_id'];
                     console_log($keys2);
 
                     // debugging
-                    print_r($choices);
+                    //print_r($choices);
 
                     echo $keys[0] . ' | ' . $keys[1] . ' | ' . $keys[2] . '<br><br><h2>Least Favorite</h2>' . $keys2[0] . '<br>';
 

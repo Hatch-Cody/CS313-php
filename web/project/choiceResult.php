@@ -64,6 +64,12 @@ $group_id = $_GET['group_id'];
                         $three = preg_replace("/(?![.=$'€%-])\p{P}/u", "", $three);
                         $least = preg_replace("/(?![.=$'€%-])\p{P}/u", "", $least);
 
+                        // remove unwanted spaces
+                        $one   = preg_replace("/(^\s*)|(\s*$)/u", "", $one);
+                        $two   = preg_replace("/(^\s*)|(\s*$)/u", "", $two);
+                        $three = preg_replace("/(^\s*)|(\s*$)/u", "", $three);
+                        $least = preg_replace("/(^\s*)|(\s*$)/u", "", $least);
+
                         // debugging
                         console_log($one);
                         console_log($two);
@@ -123,7 +129,7 @@ $group_id = $_GET['group_id'];
             Page Designed By: Cody Hatch
         </footer>
     </div>
-    
+
 
 </body>
 

@@ -17,38 +17,38 @@
     </div>
 
     <div class="page">
-        
-    </div>
 
-    <!-- The MyModal -->
-    <div id="theModal" class="myModal myModal-backdrop">
-        <div class="myModal-dialog">
-            <div class="myModal-content">
-                <div class="myModal-header">
-                    <h3 class="myModal-title"><b>Instructions</b></h3>
-                    <button type="button" class="closeButton">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="myModal-body">
-                    <p>
-                        Have you ever been with a group of friends or family as they try to decide where they should go out to eat?
-                        Of course you have! We all have! It is a battle as each person struggles to voice their opinion about which
-                        place would be best or which places are a bad choice. It can get pretty chaotic, especially when you consider
-                        they are all hangry.
 
-                        Group Choice was made to solve this problem so that you and your friends or family can avoid the brawl and get
-                        on with your lives.
 
-                        This app was designed with simplicity in mind: All you have to do is make or join a group and input your top
-                        three restaurant choices and if you have a restaurant that you dont like, put that in there too. Then all you
-                        have to do is check the results to determine where you should go eat.
+        <!-- The Modal -->
+        <div id="theModal" class="myModal myModal-backdrop">
+            <div class="myModal-dialog">
+                <div class="myModal-content">
+                    <div class="myModal-header">
+                        <h3 class="myModal-title"><b>Instructions</b></h3>
+                        <button type="button" class="closeButton">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="myModal-body">
+                        <p>
+                            Have you ever been with a group of friends or family as they try to decide where they should go out to eat?
+                            Of course you have! We all have! It is a battle as each person struggles to voice their opinion about which
+                            place would be best or which places are a bad choice. It can get pretty chaotic, especially when you consider
+                            they are all hangry.
 
-                    </p>
+                            Group Choice was made to solve this problem so that you and your friends or family can avoid the brawl and get
+                            on with your lives.
+
+                            This app was designed with simplicity in mind: All you have to do is make or join a group and input your top
+                            three restaurant choices and if you have a restaurant that you dont like, put that in there too. Then all you
+                            have to do is check the results to determine where you should go eat.
+
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <script>
@@ -62,13 +62,13 @@
         var span = document.getElementsByClassName("closeButton")[0];
 
         // When the page loads, open the myModal 
-		function open() {
-			myModal.style.display = "block";
-		}
+        function open() {
+            myModal.style.display = "block";
+        }
 
         // When the user clicks the button, open the myModal 
         //btn.onclick = function() {
-            //myModal.style.display = "block";
+        //myModal.style.display = "block";
         //}
 
         // When the user clicks on <span> (x), close the myModal

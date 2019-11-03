@@ -50,7 +50,7 @@
                             on with your lives.<br><br>
 
                             This app was designed with simplicity in mind: All you have to do is make or join a group and input your top
-                            three restaurant choices and if you have a restaurant that you dont like, put that in there too. Then all you
+                            three restaurant choices and if you have a restaurant that you don't like, put that in there too. Then all you
                             have to do is check the results to determine where you should go eat.
 
                         </p>

@@ -52,7 +52,7 @@ $group_id = $_GET['group_id'];
 
                         // multidimensional array with the first value as the choice and 
                         // the second value as the numer of times it has been chosen
-                        for ($i = 0; i < sizeof($choices); $i++) {
+                        //for ($i = 0; i < sizeof($choices); $i++) {
 
                             echo 'one == ' . $one . '<br>';
                             echo '$choices[$i] == ' . $choices[$i] . '<br>';
@@ -77,7 +77,7 @@ $group_id = $_GET['group_id'];
                                 $$choices[$i][0] += 1;
                             } else if ($three == $choices[$i])
                                 $choices[$i][0] += 1;
-                        }
+                        //}
 
                         for ($i = 0; i < sizeof($leastFavorite); $i++)
                             // check if choice at row[least_favorite] is not in array ? add it to array[i] : increase count at array[i][0]  

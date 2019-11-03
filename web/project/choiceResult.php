@@ -29,9 +29,16 @@ $group_id = $_GET['group_id'];
 
                     <?php
 
+                    // debugging
+                    function console_log($data)
+                    {
+                        echo '<script>';
+                        echo 'console.log(' . json_encode($data) . ')';
+                        echo '</script>';
+                    }
+
                     $tempArray = array();
                     $tempLeast = array();
-                    //$leastFavorite = array();
 
                     require("dbConnect.php");
                     $db = get_db();
@@ -51,12 +58,18 @@ $group_id = $_GET['group_id'];
 
                         $least = strtolower($row['least_favorite']);
 
+                        // debugging
+                        console_log($one);
+                        console_log($two);
+                        console_log($three);
+                        console_log($least);
+
                         array_push($tempArray, $one, $two, $three);
                         array_push($tempLeast, $least);
 
 
                         //echo $one . ' | ' . $two . ' | ' .
-                         //   $three . ' | ' . $least . '<br/>';
+                        //   $three . ' | ' . $least . '<br/>';
                     }
 
                     $choices = array_count_values($tempArray);
@@ -64,6 +77,10 @@ $group_id = $_GET['group_id'];
 
                     arsort($choices);
                     arsort($leastFavorite);
+
+                    // debugging
+                    console_log($choices);
+                    console_log($leastFavorite);
 
                     $keys = array_keys($choices);
                     $keys2 = array_keys($leastFavorite);
@@ -82,6 +99,7 @@ $group_id = $_GET['group_id'];
             Page Designed By: Cody Hatch
         </footer>
     </div>
+    
 
 </body>
 

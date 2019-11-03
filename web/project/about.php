@@ -28,9 +28,7 @@
     </div>
 
     <div class="page">
-
-
-
+        
         <!-- The Modal -->
         <div id="theModal" class="myModal myModal-backdrop">
             <div class="myModal-dialog">

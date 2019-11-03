@@ -29,9 +29,6 @@ $group_id = $_GET['group_id'];
 
                     <?php
 
-                    //$choices = new \Ds\Vector();
-                    //$leastFavorite = new \Ds\Vector();
-
                     $choices = array();
                     $leastFavorite = array();
 
@@ -54,53 +51,59 @@ $group_id = $_GET['group_id'];
                         $least = strtolower($row['least_favorite']);
 
                         // multidimensional array with the first value as the choice and 
-                        // the second value as the numer of time it has been chosen
+                        // the second value as the numer of times it has been chosen
                         for ($i = 0; i < sizeof($choices); $i++) {
 
+                            // check if choice at row[num_one] is not in array ? add it to array[i] : increase count at array[i][0]  
                             if ($one != $choices[$i] && $choices[$i] == NULL) {
                                 $choices[$i] = $one;
-                                $choices[$i][0]+=1;
-                            }
+                                $choices[$i][0] += 1;
+                            } else if ($one == $choices[$i])
+                                $choices[$i][0] += 1;
 
+                            // check if choice at row[num_two] is not in array ? add it to array[i] : increase count at array[i][0]  
                             if ($two != $choices[$i] && $choices[$i] == NULL) {
                                 $choices[$i] = $two;
-                                $choices[$i][0]+=1;
-                            }
+                                $choices[$i][0] += 1;
+                            } else if ($two == $choices[$i])
+                                $choices[$i][0] += 1;
 
+                            // check if choice at row[num_three] is not in array ? add it to array[i] : increase count at array[i][0]  
                             if ($three != $choices[$i] && $choices[$i] == NULL) {
                                 $choices[$i] = $three;
-                                $$choices[$i][0]+=1;
-                            }
+                                $$choices[$i][0] += 1;
+                            } else if ($three == $choices[$i])
+                                $choices[$i][0] += 1;
                         }
 
                         for ($i = 0; i < sizeof($leastFavorite); $i++)
+                            // check if choice at row[least_favorite] is not in array ? add it to array[i] : increase count at array[i][0]  
                             if ($least != $leastFavorite[$i] && $leastFavorite[$i] == NULL) {
                                 $leastFavorite[$i] = $least;
-                                $choices[$i][0]+=1;
+                                $choices[$i][0] += 1;
                             }
 
                         echo $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
                     }
 
-                    $numOne;
-                    $numTwo;
-                    $numThree;
+                    $choiceLeader = 0;
+                    $choiceSecond = 0;
+                    $choiceThird  = 0;
 
+                    // loop through all the choices
                     for ($i = 0; i < sizeof($choices); $i++) {
-                        $one = $choices[$i][0];
-                        $two = $choices[$i][0];
-                        $three = $choices[$i][0];
-
-                        if ($choices[$i][0] > $one)
-                            $numOne = $choices[$i];
-                        else if ($choices[$i][0] > $two)
+                    
+                        // get 1st, 2nd, and 3rd place choices
+                        if      ($choices[$i][0] > $choiceLeader)
+                            $choiceLeader = $choices[$i];
+                        else if ($choices[$i][0] > $choiceSecond)
                             $numTwo = $choices[$i];
-                        else if ($choices[$i][0] > $three)
-                            $numThree = $choices[$i];
+                        else if ($choices[$i][0] > $choiceThird)
+                            $choiceThird = $choices[$i];
                     }
 
-                    echo 'Results: ' . $numOne . ' | ' . $numTwo . ' | ' . $numThree . '<br>';
+                    echo 'TOTAL Results: ' . $choiceLeader . ' | ' . $choiceSecond . ' | ' . $choiceThird . '<br>';
 
 
 

@@ -52,11 +52,17 @@ $group_id = $_GET['group_id'];
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
+                        // remove any uppercast characters
                         $one   = strtolower($row['num_one']);
                         $two   = strtolower($row['num_two']);
                         $three = strtolower($row['num_three']);
-
                         $least = strtolower($row['least_favorite']);
+
+                        // remove unwanted punctuation
+                        $one   = preg_replace("/(?![.=$'€%-])\p{P}/u", "", $one);
+                        $two   = preg_replace("/(?![.=$'€%-])\p{P}/u", "", $two);
+                        $three = preg_replace("/(?![.=$'€%-])\p{P}/u", "", $three);
+                        $least = preg_replace("/(?![.=$'€%-])\p{P}/u", "", $least);
 
                         // debugging
                         console_log($one);
@@ -89,6 +95,7 @@ $group_id = $_GET['group_id'];
                     $keys = array_keys($choices);
                     $keys2 = array_keys($leastFavorite);
 
+                    // debugging
                     print_r($choices);
 
                     echo $keys[0] . ' | ' . $keys[1] . ' | ' . $keys[2] . '<br><br><h2>Least Favorite</h2>' . $keys2[0] . '<br>';

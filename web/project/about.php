@@ -35,10 +35,10 @@
                             Have you ever been with a group of friends or family as they try to decide where they should go out to eat?
                             Of course you have! We all have! It is a battle as each person struggles to voice their opinion about which
                             place would be best or which places are a bad choice. It can get pretty chaotic, especially when you consider
-                            they are all hangry.
+                            they are all hangry.<br>
 
                             Group Choice was made to solve this problem so that you and your friends or family can avoid the brawl and get
-                            on with your lives.
+                            on with your lives.<br>
 
                             This app was designed with simplicity in mind: All you have to do is make or join a group and input your top
                             three restaurant choices and if you have a restaurant that you dont like, put that in there too. Then all you

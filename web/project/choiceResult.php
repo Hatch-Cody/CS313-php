@@ -30,8 +30,8 @@ $group_id = $_GET['group_id'];
                     <?php
 
                     $tempArray = array();
-                    //$choices = array();
-                    $leastFavorite = array();
+                    $tempLeast = array();
+                    //$leastFavorite = array();
 
                     require("dbConnect.php");
                     $db = get_db();
@@ -52,6 +52,7 @@ $group_id = $_GET['group_id'];
                         $least = strtolower($row['least_favorite']);
 
                         array_push($tempArray, $one, $two, $three);
+                        array_push($tempLeast, $least);
 
 
                         //echo $one . ' | ' . $two . ' | ' .
@@ -59,12 +60,15 @@ $group_id = $_GET['group_id'];
                     }
 
                     $choices = array_count_values($tempArray);
+                    $leastFavorite = array_count_values($tempLeast);
 
                     arsort($choices);
+                    arsort($leastFavorite);
 
                     $keys = array_keys($choices);
+                    $keys2 = array_keys($leastFavorite);
 
-                    echo $keys[0] . ' | ' . $keys[1] . ' | ' . $keys[2] . '<br>';
+                    echo $keys[0] . ' | ' . $keys[1] . ' | ' . $keys[2] . '<br> Least Favorite <br>' . $keys2[0] . '<br>';
 
                     ?>
 

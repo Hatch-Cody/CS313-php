@@ -30,7 +30,7 @@ $group_id = $_GET['group_id'];
                     <?php
 
                     $tempArray = array();
-                    $choices = array();
+                    //$choices = array();
                     $leastFavorite = array();
 
                     require("dbConnect.php");
@@ -54,74 +54,40 @@ $group_id = $_GET['group_id'];
                         array_push($tempArray, $one, $two, $three);
 
 
-                        echo $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
-                            $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
+                        // echo $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
+                        //     $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
                     }
 
-                    // multidimensional array with the first value as the choice and 
-                    // the second value as the numer of times it has been chosen
-                    for ($i = 0; i < sizeof($tempArray); $i++) {
+                    $choices = array_count_values($tempArray);
 
-                        echo 'one == ' . $one . '<br>';
-                        echo '$choices[i] == ' . $choices[$i] . '<br>';
+                    // $choiceLeader = "";
+                    // $choiceSecond = "";
+                    // $choiceThird  = "";
 
-                        // check if choice at row[num_one] is not in array ? add it to array[i] : increase count at array[i][0]  
-                        if ($one != $choices[$i] && $choices[$i] == NULL) {
-                            $choices[$i] = $one;
-                            $choices[$i][0] += 1;
-                        } else if ($one == $choices[$i])
-                            $choices[$i][0] += 1;
+                    // // loop through all the choices
+                    // for ($i = 0; i < sizeof($choices); $i++) {
 
-                        // check if choice at row[num_two] is not in array ? add it to array[i] : increase count at array[i][0]  
-                        if ($two != $choices[$i] && $choices[$i] == NULL) {
-                            $choices[$i] = $two;
-                            $choices[$i][0] += 1;
-                        } else if ($two == $choices[$i])
-                            $choices[$i][0] += 1;
+                    //     // set temp values 
+                    //     $one   = 0;
+                    //     $two   = 0;
+                    //     $three = 0;
 
-                        // check if choice at row[num_three] is not in array ? add it to array[i] : increase count at array[i][0]  
-                        if ($three != $choices[$i] && $choices[$i] == NULL) {
-                            $choices[$i] = $three;
-                            $$choices[$i][0] += 1;
-                        } else if ($three == $choices[$i])
-                            $choices[$i][0] += 1;
-                    }
+                    //     echo $choices[$i] . '<br>';
 
-                    for ($i = 0; i < sizeof($leastFavorite); $i++)
-                        // check if choice at row[least_favorite] is not in array ? add it to array[i] : increase count at array[i][0]  
-                        if ($least != $leastFavorite[$i] && $leastFavorite[$i] == NULL) {
-                            $leastFavorite[$i] = $least;
-                            $choices[$i][0] += 1;
-                        }
+                    //     // get 1st, 2nd, and 3rd place choices
+                    //     if ($choices[$i][0] > $one) {
+                    //         $choiceLeader = $choices[$i];
+                    //         $one = $choices[$i][0];
+                    //     } else if ($choices[$i][0] > $two) {
+                    //         $numTwo = $choices[$i];
+                    //         $two = $choices[$i][0];
+                    //     } else if ($choices[$i][0] > $three) {
+                    //         $choiceThird = $choices[$i];
+                    //         $three = $choices[$i][0];
+                    //     }
+                    // }
 
-                    $choiceLeader = "";
-                    $choiceSecond = "";
-                    $choiceThird  = "";
-
-                    // loop through all the choices
-                    for ($i = 0; i < sizeof($choices); $i++) {
-
-                        // set temp values 
-                        $one   = 0;
-                        $two   = 0;
-                        $three = 0;
-
-                        echo $choices[$i] . '<br>';
-
-                        // get 1st, 2nd, and 3rd place choices
-                        if ($choices[$i][0] > $one) {
-                            $choiceLeader = $choices[$i];
-                            $one = $choices[$i][0];
-                        } else if ($choices[$i][0] > $two) {
-                            $numTwo = $choices[$i];
-                            $two = $choices[$i][0];
-                        } else if ($choices[$i][0] > $three) {
-                            $choiceThird = $choices[$i];
-                            $three = $choices[$i][0];
-                        }
-                    }
-
-                    echo 'Results: ' . $choiceLeader . ' | ' . $choiceSecond . ' | ' . $choiceThird . '<br>';
+                    echo 'Results: ' . $choices[0] . ' | ' . $choices[1] . ' | ' . $choices[2] . '<br>';
 
 
 

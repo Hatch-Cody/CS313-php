@@ -8,6 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="project.css">
 
+    <style>
+        html, body {
+            margin:0;
+            height:100%;
+            overflow: hidden;
+        }
+    </style>
+
 </head>
 
 <body onload="open()">

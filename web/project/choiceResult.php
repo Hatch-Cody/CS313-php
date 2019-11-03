@@ -96,7 +96,7 @@ $group_id = $_GET['group_id'];
                     //     }
                     // }
 
-                    echo '<br>Results: ' . $choices[$keys[0]] . ' | ' . $choices[$keys[1]] . ' | ' . $choices[$keys[2]] . '<br>';
+                    echo '<br>Results: ' . $keys[0] . ' | ' . $keys[1] . ' | ' . $keys[2] . '<br>';
 
 
 

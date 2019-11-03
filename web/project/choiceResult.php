@@ -58,7 +58,9 @@ $group_id = $_GET['group_id'];
                             $three . ' | ' . $least . '<br/>';
                     }
 
-                    $choices = arsort(array_count_values($tempArray));
+                    $choices = array_count_values($tempArray);
+
+                    arsort($choices);
 
                     echo '<br> <br>';
                     print_r(max($choices));

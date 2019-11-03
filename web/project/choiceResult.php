@@ -93,11 +93,16 @@ $group_id = $_GET['group_id'];
                     $choices = array_count_values($tempArray);
                     $leastFavorite = array_count_values($tempLeast);
 
+                    // remove blank elements in the array
+                    $choices = array_filter($choices);
+                    $leastFavorite = array_filter($leastFavorite);
+
                     // debugging
                     console_log('after array_count_values:');
                     console_log($choices);
                     console_log($leastFavorite);
 
+                    // sort the array by number that each restaurant was chosen
                     arsort($choices);
                     arsort($leastFavorite);
 
@@ -106,6 +111,7 @@ $group_id = $_GET['group_id'];
                     console_log($choices);
                     console_log($leastFavorite);
 
+                    // get the keys for the arrays
                     $keys = array_keys($choices);
                     $keys2 = array_keys($leastFavorite);
 

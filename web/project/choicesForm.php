@@ -94,20 +94,6 @@ $group_id = $_GET['group_id'];
 				}
 			}
 
-			#submit {
-				color: #ffffff;
-				background-color: #1f2833;
-				font-size: 15px;
-				font-family: roboto;
-				padding: 15px;
-				border-radius: 12px;
-				border: 2px solid #45a29e;
-			}
-
-			#submit:hover {
-				color: #ffffff;
-				background-color: #343e49;
-			}
 	</style>
 
 </head>

@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="project.css">
 
     <style>
-        html, body {
-            margin:0;
-            height:100%;
+        html,
+        body {
+            margin: 0;
+            height: 100%;
             overflow: hidden;
         }
     </style>
@@ -22,6 +23,8 @@
     <!-- Nav Bar -->
     <div class="topnav">
         <a href="projectHome.html">Home</a>
+        <a class="active" href="about.php">About</a>
+        <a href="#howItWorks">Instructions</a>
     </div>
 
     <div class="page">

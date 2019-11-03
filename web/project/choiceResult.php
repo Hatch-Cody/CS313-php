@@ -60,7 +60,7 @@ $group_id = $_GET['group_id'];
 
                     $choices = array_count_values($tempArray);
 
-                    print_r(max(array_keys($choices)));
+                    print_r(max($choices));
                     echo '<br> max key ^ choices--<br>';
                     print_r($choices);
 

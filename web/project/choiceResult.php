@@ -54,8 +54,8 @@ $group_id = $_GET['group_id'];
                         array_push($tempArray, $one, $two, $three);
 
 
-                        // echo $row['num_one'] . ' | ' . $row['num_two'] . ' | ' .
-                        //     $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
+                        echo $one . ' | ' . $two . ' | ' .
+                            $three . ' | ' . $least_favorite . '<br/>';
                     }
 
                     $choices = array_count_values($tempArray);

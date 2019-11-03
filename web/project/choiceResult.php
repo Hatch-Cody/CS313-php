@@ -50,6 +50,8 @@ $group_id = $_GET['group_id'];
 
                         $least = strtolower($row['least_favorite']);
 
+                        echo 'one == ' . $one . '<br>';
+
                         // multidimensional array with the first value as the choice and 
                         // the second value as the numer of times it has been chosen
                         for ($i = 0; i < sizeof($choices); $i++) {

@@ -123,7 +123,7 @@ $group_id = $_GET['group_id'];
                     // debugging
                     //print_r($choices);
 
-                    echo ucwords($keys[0]) . ' | ' . ucwords($keys[1]) . ' | ' . ucwords($keys[2]) . '<br><br><h2>Least Favorite</h2>' . ucwords($keys2[0]) . '<br>';
+                    echo '#1:' . ucwords($keys[0]) . '<br>#2:' . ucwords($keys[1]) . '<br>#3:' . ucwords($keys[2]) . '<br><br><h2>Least Favorite</h2>' . ucwords($keys2[0]) . '<br>';
 
                     ?>
 

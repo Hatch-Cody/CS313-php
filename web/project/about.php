@@ -23,7 +23,7 @@
     <!-- Nav Bar -->
     <div class="topnav">
         <a href="projectHome.html">Home</a>
-        <a class="active" href="about.php">About</a>
+        <a href="about.php">About</a>
         <a href="#howItWorks">Instructions</a>
     </div>
 

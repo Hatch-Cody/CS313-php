@@ -55,10 +55,12 @@ $group_id = $_GET['group_id'];
 
 
                         echo $one . ' | ' . $two . ' | ' .
-                            $three . ' | ' . $least_favorite . '<br/>';
+                            $three . ' | ' . $least . '<br/>';
                     }
 
                     $choices = array_count_values($tempArray);
+
+                    print_r($choices);
 
                     // $choiceLeader = "";
                     // $choiceSecond = "";

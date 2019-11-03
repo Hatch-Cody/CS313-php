@@ -20,7 +20,7 @@ CREATE TABLE "group" (
 ALTER TABLE "group_member" ADD FOREIGN KEY ("group_id") REFERENCES "group" ("group_id");
 
 
-
+-- For testing purposes
 INSERT INTO "group" (group_id, choice_one, choice_two, choice_three) VALUES ('1a2v3f', 'choiceOne', 'choiceTwo', 'choiceThree');
 
 INSERT INTO "group_member" (num_one, num_two, num_three, least_favorite, username, group_id) VALUES ('McDonalds', 'Little Cesars', 'Jimmy Johns', 'Wendys', 'James', '1a2v3f');

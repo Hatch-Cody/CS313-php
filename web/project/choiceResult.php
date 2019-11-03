@@ -65,9 +65,9 @@ $group_id = $_GET['group_id'];
                     $keys = array_keys($choices);
 
                     echo '<br> <br>';
-                    print_r(max($choices));
-                    echo '<br> max key ^ choices--<br>';
-                    print_r($choices);
+                    //print_r(max($choices));
+                    //echo '<br> max key ^ choices--<br>';
+                    //print_r($choices);
 
                     // $choiceLeader = "";
                     // $choiceSecond = "";

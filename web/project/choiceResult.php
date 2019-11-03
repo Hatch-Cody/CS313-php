@@ -87,9 +87,9 @@ $group_id = $_GET['group_id'];
                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
                     }
 
-                    $choiceLeader;
-                    $choiceSecond;
-                    $choiceThird;
+                    $choiceLeader = "";
+                    $choiceSecond = "";
+                    $choiceThird  = "";
 
                     // loop through all the choices
                     for ($i = 0; i < sizeof($choices); $i++) {

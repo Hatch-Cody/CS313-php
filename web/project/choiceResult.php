@@ -87,23 +87,34 @@ $group_id = $_GET['group_id'];
                             $row['num_three'] . ' | ' . $row['least_favorite'] . '<br/>';
                     }
 
-                    $choiceLeader = 0;
-                    $choiceSecond = 0;
-                    $choiceThird  = 0;
+                    $choiceLeader;
+                    $choiceSecond;
+                    $choiceThird;
 
                     // loop through all the choices
                     for ($i = 0; i < sizeof($choices); $i++) {
-                    
+                        
+                        // set temp values 
+                        $one   = 0;
+                        $two   = 0;
+                        $three = 0;
+
                         // get 1st, 2nd, and 3rd place choices
-                        if      ($choices[$i][0] > $choiceLeader)
+                        if      ($choices[$i][0] > $one) {
                             $choiceLeader = $choices[$i];
-                        else if ($choices[$i][0] > $choiceSecond)
+                            $one = $choices[$i][0];
+                        }
+                        else if ($choices[$i][0] > $two) {
                             $numTwo = $choices[$i];
-                        else if ($choices[$i][0] > $choiceThird)
+                            $two = $choices[$i][0];
+                        }
+                        else if ($choices[$i][0] > $three) {
                             $choiceThird = $choices[$i];
+                            $three = $choices[$i][0];
+                        }
                     }
 
-                    echo 'TOTAL Results: ' . $choiceLeader . ' | ' . $choiceSecond . ' | ' . $choiceThird . '<br>';
+                    echo 'Results: ' . $choiceLeader . ' | ' . $choiceSecond . ' | ' . $choiceThird . '<br>';
 
 
 

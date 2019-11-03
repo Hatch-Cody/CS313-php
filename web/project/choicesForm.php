@@ -118,7 +118,7 @@ $group_id = $_GET['group_id'];
 					<input type="text" name="num_three" placeholder="Third Choice"><br>
 					<input type="text" name="least_favorite" placeholder="Least Favorite">
 					<br>
-					<input type="submit" class="submit" onclick="submitChoices()" value="Submit">
+					<input type="submit" onclick="submitChoices()" value="Submit">
 				</form>
 			</div>
 		</div>

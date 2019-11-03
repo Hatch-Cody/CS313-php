@@ -412,9 +412,11 @@ button:hover {
 .submit {
 	color: #ffffff;
 	background-color: #1f2833;
+	border-color: #45a29e;
 	font-size: 15px;
 	font-family: roboto;
-	padding: 15px;
+	padding: 10px;
+	margin: 10px;
 	border-radius: 12px;
 	border: 2px solid #45a29e;
 }

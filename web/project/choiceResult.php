@@ -94,7 +94,7 @@ $group_id = $_GET['group_id'];
                     //     }
                     // }
 
-                    echo 'Results: ' . key($choices[0]) . ' | ' . key($choices[1]) . ' | ' . key($choices[2]) . '<br>';
+                    echo '<br>Results: ' . key($choices[0]) . ' | ' . key($choices[1]) . ' | ' . key($choices[2]) . '<br>';
 
 
 

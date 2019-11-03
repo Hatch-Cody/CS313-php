@@ -365,6 +365,21 @@ body {
 	background-color: #343e49;
 }
 
+.infoBox>input[type="submit"] {
+	color: #ffffff;
+	background-color: #1f2833;
+	font-size: 15px;
+	font-family: roboto;
+	padding: 15px;
+	border-radius: 12px;
+	border: 2px solid #45a29e;
+}
+
+.infoBox>input[type="submit"]:hover {
+	color: #ffffff;
+	background-color: #343e49;
+}
+
 .wideInfoBox {
 	background-color: #3E6073;
 	padding: 15px;
@@ -405,23 +420,6 @@ button {
 }
 
 button:hover {
-	color: #ffffff;
-	background-color: #343e49;
-}
-
-.submit {
-	color: #ffffff;
-	background-color: #1f2833;
-	border-color: #45a29e;
-	font-size: 15px;
-	font-family: roboto;
-	padding: 10px;
-	margin: 10px;
-	border-radius: 12px;
-	border: 2px solid #45a29e;
-}
-
-.submit:hover {
 	color: #ffffff;
 	background-color: #343e49;
 }

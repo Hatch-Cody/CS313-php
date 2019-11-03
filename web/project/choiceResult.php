@@ -75,6 +75,10 @@ $group_id = $_GET['group_id'];
                     $choices = array_count_values($tempArray);
                     $leastFavorite = array_count_values($tempLeast);
 
+                    // debugging
+                    console_log($choices);
+                    console_log($leastFavorite);
+
                     arsort($choices);
                     arsort($leastFavorite);
 
